@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_04_095734) do
+ActiveRecord::Schema.define(version: 2020_02_04_111957) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "antennes", force: :cascade do |t|
+    t.bigint "site_id"
+    t.bigint "service_id"
+    t.string "nom"
+    t.string "cds"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["service_id"], name: "index_antennes_on_service_id"
+    t.index ["site_id"], name: "index_antennes_on_site_id"
+  end
 
   create_table "poles", force: :cascade do |t|
     t.string "nom"
@@ -30,6 +41,29 @@ ActiveRecord::Schema.define(version: 2020_02_04_095734) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "services", force: :cascade do |t|
+    t.string "nom"
+    t.bigint "pole_id"
+    t.text "mission"
+    t.text "modalités"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pole_id"], name: "index_services_on_pole_id"
+  end
+
+  create_table "sites", force: :cascade do |t|
+    t.string "nom"
+    t.string "adresse"
+    t.string "adresse2"
+    t.integer "code_postal"
+    t.string "ville"
+    t.string "tel"
+    t.string "responsable"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -42,4 +76,7 @@ ActiveRecord::Schema.define(version: 2020_02_04_095734) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "antennes", "services"
+  add_foreign_key "antennes", "sites"
+  add_foreign_key "services", "poles"
 end

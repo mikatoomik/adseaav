@@ -2,7 +2,7 @@
 <ol>
   <% @poles.each do |pole| %>
     <li>
-      <%= pole.nom %>
+      <%= link_to pole.nom, pole_path(pole)  %>
     </li>
   <% end %>
 </ol>

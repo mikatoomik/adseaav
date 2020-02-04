@@ -1,0 +1,25 @@
+<header class="p-3 mb-2 text-white <%= theme(@pole.nom) %>">
+  <h2>
+    <%= @pole.nom %><br>
+  </h2>
+  <p>
+    <%= @pole.adresse %><br>
+    <%= @pole.adresse2 %><br>
+    <%= @pole.code_postal %> <%= @pole.ville %><br>
+    <%= @pole.tel %><br>
+  </p>
+  <div class="bulle MO">
+    <%= @pole.bulle %><br>
+  </div>
+</header>
+<div class="d-flex bg-light">
+  <p>
+    <%= @pole.description %><br>
+  </p>
+  <p>
+    <%= @pole.principe %><br>
+  </p>
+
+</div>
+
+
