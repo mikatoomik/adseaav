@@ -1,1 +1,18 @@
-
+.bulle {
+  margin-left: 6rem !important;
+  margin-right: 5rem !important;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-clip: border-box;
+  height: 350px;
+  width: 400px;
+  text-align: center;
+  position: relative;
+  bottom: -130px;
+}
+ .bulle-text {
+  padding-top: 74px;
+  padding-left: 34px;
+  padding-right: 24px;
+ }

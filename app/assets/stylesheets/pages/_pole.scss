@@ -1,41 +1,56 @@
 .mo {
-  background: $turquoise;
+  background-color: $turquoise;
   .bulle {
-    background-color: $red;
+    background-image: url('orange.png');
   }
 }
 
 .isp {
   background: $blue;
-    .bulle {
-    background-color: $red;
+  h2 {
+    font-size: 4rem;
+  }
+  .bulle {
+    background-image: url('rouge.png');
   }
 }
 
 .mna {
   background: $red;
-    .bulle {
-    background-color: $yellow;
+  h2 {
+      color: $yellow;
+  font-size: 4rem;
+  }
+  .bulle {
+    background-image: url('jaune.png');
   }
 }
 
 .rs {
   background: $yellow;
     .bulle {
-    background-color: $red;
+    background-image: url('rouge.png');
   }
 }
 
 .ssi {
   background: $green;
     .bulle {
-    background-color: $blue;
+    background-image: url('bleu.png');
   }
 }
 
 .heb {
   background: $pink;
     .bulle {
-    background-color: $yellow;
+    background-image: url('jaune.png');
   }
+}
+
+h2, .h2 {
+    font-size: 5rem;
+}
+
+.header {
+  position: absolute;
 }
