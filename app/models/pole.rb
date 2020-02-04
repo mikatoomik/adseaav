@@ -1,0 +1,2 @@
+class Pole < ApplicationRecord
+end
