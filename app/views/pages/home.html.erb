@@ -3,6 +3,12 @@
   <% @poles.each do |pole| %>
     <li>
       <%= pole.nom %>
+      <% pole.services.each do |service| %>
+        <p> <%= service.nom %> </p>
+      <% end %>
+      <% pole.antennes.each do |antenne| %>
+        <p> <%= antenne.nom %> </p>
+      <% end %>
     </li>
   <% end %>
 </ol>
