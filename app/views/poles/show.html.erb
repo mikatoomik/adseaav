@@ -11,6 +11,13 @@
       <div class="col">
       <h2>
         <%= @pole.nom %><br>
+        <h5>
+          <% if policy(@pole).edit? %>
+            <%= link_to edit_pole_path(@pole) do %>
+            <i class="fas fa-pencil-alt"></i>
+            <% end %>
+          <% end %>
+        </h5>
       </h2>
       <p>
         <%= @pole.adresse %><br>
