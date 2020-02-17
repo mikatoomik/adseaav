@@ -3,5 +3,6 @@ class PagesController < ApplicationController
 
   def home
     @poles = Pole.all
+    @sites = Site.all
   end
 end

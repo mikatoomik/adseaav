@@ -1,54 +1,111 @@
 .mo {
   background-color: $turquoise;
+
   .bulle {
     background-image: url('orange.png');
+  }
+
+  ul {
+    list-style: url('rouge_bullet.png');
+  }
+
+  h4 {
+    color: $red;
   }
 }
 
 .isp {
   background: $blue;
+
   h2 {
     font-size: 4rem;
   }
+
   .bulle {
     background-image: url('rouge.png');
+  }
+
+  ul {
+    list-style: url('jaune_bullet.png');
+  }
+
+  h4 {
+    color: $turquoise;
   }
 }
 
 .mna {
   background: $red;
+
   h2 {
-      color: $yellow;
-  font-size: 4rem;
+    color: $yellow;
+    font-size: 4rem;
   }
+
   .bulle {
     background-image: url('jaune.png');
+  }
+
+  ul {
+    list-style: url('jaune_bullet.png');
+  }
+
+  h4 {
+    color: $red;
   }
 }
 
 .rs {
   background: $yellow;
-    .bulle {
+
+  .bulle {
     background-image: url('rouge.png');
+  }
+
+  ul {
+    list-style: url('jaune_bullet.png');
+  }
+
+  h4 {
+    color: $red;
   }
 }
 
 .ssi {
   background: $green;
-    .bulle {
+
+  .bulle {
     background-image: url('bleu.png');
+  }
+
+  ul {
+    list-style: url('vert_bullet.png');
+  }
+
+  h4 {
+    color: white;
   }
 }
 
 .heb {
   background: $pink;
-    .bulle {
+
+  .bulle {
     background-image: url('jaune.png');
+  }
+
+  ul {
+    list-style: url('jaune_bullet.png');
+  }
+
+  h4 {
+    color: $red;
   }
 }
 
-h2, .h2 {
-    font-size: 5rem;
+h2,
+.h2 {
+  font-size: 5rem;
 }
 
 .header {

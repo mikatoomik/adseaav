@@ -46,13 +46,13 @@
       </p>
     </div>
     <div class="col p-5">
-      <p class="mr-5 p-5">
-        <!-- Button trigger modal -->
+      <!-- Button trigger modal -->
         <% if policy(@pole).edit? %>
         <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#principeModal">
             <i class="fas fa-pencil-alt"></i>
         </button>
         <% end %>
+      <p>
         <%= raw( @pole.principe ) %>
       </p>
     </div>
