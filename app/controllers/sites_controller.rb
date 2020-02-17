@@ -1,6 +1,7 @@
 class SitesController < ApplicationController
   def index
-    @sites = Site.geocoded # returns sites with coordinates
+    @sites = policy_scope(Site.geocoded)
+    # @sites = Site.geocoded # returns sites with coordinates
 
     @markers = @sites.map do |site|
       {
