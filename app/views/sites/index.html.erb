@@ -1,7 +1,36 @@
-<div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
+<header>
+<h3 class="text-center">Carte interactive des sites de l'ADSEAAV</h3>
+</header>
+  <div class="row">
+    <div class="col-9">
+      <div
+        id="map"
+        style="width: 100%;
+        height: 600px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      ></div>
+    </div>
+    <div class="col-3">
+    <% @sites.each do |site| %>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= site.nom %></h5>
+          <h6 class="card-subtitle mb-2 text-muted">Adresse :</h6>
+          <p class="card-text">
+            <%= site.adresse2 %>
+            <%= site.adresse %><br>
+            <%= site.code_postal %> <%= site.ville %>
+            <%= site.tel %>
+          </p>
+        <a href="#" class="card-link">Responsable: <%= site.responsable %></a>
+        </div>
+      </div>
+       <% end%>
+      <div>
+
+
+
+
+      </div>
+    </div>
