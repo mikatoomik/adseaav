@@ -14,27 +14,6 @@
       ></div>
     </div>
     <div class="col-3">
-     <% @sites.each do |site| %>
-      <div class="card m-1git " style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">
-          <%= site.nom %></h5>
-          <%= cl_image_tag site.photo.key, class: "card-img-top mb-1" if site.photo.attached? %>
-          <h6 class="card-subtitle mb-2 text-muted">Adresse :</h6>
-          <p class="card-text">
-            <%= site.adresse2 %><br>
-            <%= site.adresse %><br>
-            <%= site.code_postal %> <%= site.ville %><br>
-            <%= site.tel %>
-          </p>
-        <a href="#" class="card-link">Responsable: <%= site.responsable %></a>
-        </div>
-      </div>
-       <% end%>
-      <div>
-
-
-
-
-      </div>
+      <%= render 'card_site' %>
     </div>
+  </div>
