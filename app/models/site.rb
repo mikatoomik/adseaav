@@ -5,4 +5,5 @@ class Site < ApplicationRecord
   end
   geocoded_by :geoaddress
   after_validation :geocode
+  has_one_attached :photo
 end
