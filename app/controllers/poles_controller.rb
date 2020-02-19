@@ -1,5 +1,5 @@
 class PolesController < ApplicationController
-  before_action :set_pole, only: %i[show edit update edit_adresse]
+  before_action :set_pole, only: %i[show update]
   def index
     @poles = policy_scope(Pole)
   end

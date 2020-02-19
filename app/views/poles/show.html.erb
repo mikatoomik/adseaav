@@ -57,17 +57,29 @@
       </p>
     </div>
   </div>
-  <div class="footer">
-    <div class="row">
-      <div class="col">
-        <% @pole.services.each do |service| %>
-          <%= service.nom %>
-          <% end %>
+  <div class="row">
+    <div class="col ml-5 pl-5">
+    <% @pole.services.each do |service| %>
+      <h3><%= service.nom %></h3>
+      <%= link_to edit_pole_service_path(service) do %>
+        <i class="fas fa-pencil-alt"></i>
+      <% end %>
+      <%= raw(service.description) %>
+      <div class="row">
+        <div class="col-6">
+        <%= raw(service.mission) %>
+        </div>
+        <div class="col-6">
+        <%= raw(service.modalités) %>
+        </div>
       </div>
+    <% end %>
     </div>
   </div>
-</div>
 
+  <div class="footer">
+  </div>
+</div>
 
 
 

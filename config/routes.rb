@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :poles
+  resources :poles do
+    resources :services
+    resources :antennes
+  end
   resources :sites
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -9,8 +9,22 @@
     list-style: url('rouge_bullet.png');
   }
 
+  h3 {
+    color: white;
+  }
+
   h4 {
     color: $red;
+  }
+
+  .mission {
+    ul {
+      list-style: url('jaune_bullet.png');
+
+      ul {
+        list-style: url('rouge_bullet.png');
+      }
+    }
   }
 }
 
