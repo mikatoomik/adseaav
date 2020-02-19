@@ -1,17 +1,26 @@
 <% @sites.each do |site| %>
-<div class="card m-1git " style="width: 18rem;">
-  <div class="card-body">
+<div class="card mx-1 mb-3 " style="width: 18rem;">
+  <div class="card-header">
     <h5 class="card-title">
     <%= site.nom %></h5>
     <%= cl_image_tag site.photo.key, class: "card-img-top mb-1" if site.photo.attached? %>
-    <h6 class="card-subtitle mb-2 text-muted">Adresse :</h6>
+  </div>
+  <div class="card-body">
+    <h6 class="card-subtitle text-muted">Adresse :</h6>
     <p class="card-text">
       <%= site.adresse2 %><br>
       <%= site.adresse %><br>
       <%= site.code_postal %> <%= site.ville %><br>
-      <%= site.tel %>
+      <%= site.tel %><br>
+      Responsable: <%= site.responsable %>
     </p>
-    <a href="#" class="card-link">Responsable: <%= site.responsable %></a>
+  </div>
+  <div class="card-footer text-muted">
+    <ul>
+      <% site.antennes.each do |antenne| %>
+        <li><%= antenne.nom %></li>
+      <% end %>
+    </ul>
   </div>
 </div>
 <% end %>
