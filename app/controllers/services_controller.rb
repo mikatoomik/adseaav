@@ -8,11 +8,12 @@ class ServicesController < ApplicationController
   end
 
   def edit
+    @pole = Pole.find(params[:pole_id])
   end
 
   def update
     @service.update(service_params)
-    redirect_to service_path
+    redirect_to pole_path
   end
 
   private

@@ -57,15 +57,17 @@
       </p>
     </div>
   </div>
-  <div class="row">
-    <div class="col ml-5 pl-5">
+  <div class="row service">
+    <div class="col mx-5 px-5">
     <% @pole.services.each do |service| %>
       <h3><%= service.nom %></h3>
-      <%= link_to edit_pole_service_path(service) do %>
-        <i class="fas fa-pencil-alt"></i>
+      <% if policy(@pole).edit? %>
+        <%= link_to edit_pole_service_path(service) do %>
+          <i class="fas fa-pencil-alt"></i>
+        <% end %>
       <% end %>
       <%= raw(service.description) %>
-      <div class="row">
+      <div class="row mission">
         <div class="col-6">
         <%= raw(service.mission) %>
         </div>

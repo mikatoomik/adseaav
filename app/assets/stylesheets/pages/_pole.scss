@@ -17,7 +17,15 @@
     color: $red;
   }
 
+  .service {
+    h4 {
+      color: $yellow;
+    }
+  }
+
   .mission {
+    color: white;
+
     ul {
       list-style: url('jaune_bullet.png');
 
@@ -26,6 +34,7 @@
       }
     }
   }
+
 }
 
 .isp {
