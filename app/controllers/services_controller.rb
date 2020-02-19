@@ -13,7 +13,7 @@ class ServicesController < ApplicationController
 
   def update
     @service.update(service_params)
-    redirect_to pole_path
+    redirect_to pole_path(@service.pole)
   end
 
   private

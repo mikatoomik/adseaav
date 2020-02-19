@@ -62,7 +62,7 @@
     <% @pole.services.each do |service| %>
       <h3><%= service.nom %></h3>
       <% if policy(@pole).edit? %>
-        <%= link_to edit_pole_service_path(service) do %>
+        <%= link_to edit_pole_service_path(@pole, service) do %>
           <i class="fas fa-pencil-alt"></i>
         <% end %>
       <% end %>
