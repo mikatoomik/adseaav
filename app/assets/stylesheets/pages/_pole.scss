@@ -1,5 +1,8 @@
 .mo {
   background-color: $turquoise;
+  header > div {
+    flex-direction: row-reverse !important;
+  }
 
   .bulle {
     background-image: url('orange.png');
@@ -67,6 +70,17 @@
 
   .bulle {
     background-image: url('jaune.png');
+    margin-left: 2rem !important;
+    margin-right: 0rem !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-clip: border-box;
+    height: 440px;
+    /* width: 400px; */
+    text-align: center;
+    position: relative;
+    bottom: -130px;
   }
 
   ul {
@@ -75,6 +89,22 @@
 
   h4 {
     color: $red;
+  }
+
+  .service {
+    color: white;
+
+    h3 {
+      color: $yellow;
+    }
+
+    ul {
+      list-style: url('jaune_bullet.png');
+
+      ul {
+        list-style: url('rouge_bullet.png');
+      }
+    }
   }
 }
 
