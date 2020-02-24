@@ -25,13 +25,17 @@ body {
   }
 }
 #rosace {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  flex-direction: column;
-    img {
-	  max-width: 56%;
-	  height: auto;
-    }
+  width: 300px;
+  object-fit: contain;
   }
-
+#decouvrir {
+  overflow: hidden;
+  position: relative;
+}
+#mini_rosace {
+    width: 150px;
+    object-fit: contain;
+    position: absolute;
+    right: -60px;
+    bottom: 0px;
+}
