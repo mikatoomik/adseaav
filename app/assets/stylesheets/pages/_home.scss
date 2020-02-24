@@ -2,3 +2,36 @@
 // body {
 //   background: $light-gray;
 // }
+body {
+  color: $blue;
+}
+.title h1 {
+  text-align: right;
+  font-weight: bold;
+  span {
+    font-size: 130%;
+    &.rose {
+      color: $pink;
+    }
+    &.rouge {
+      color: $red;
+    }
+    &.vert {
+      color: $green;
+    }
+    &.turquoise {
+      color: $turquoise;
+    }
+  }
+}
+#rosace {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+    img {
+	  max-width: 56%;
+	  height: auto;
+    }
+  }
+

@@ -1,28 +1,49 @@
-<h1>Nouveau site de l'ADSEAAV</h1>
+<div class="row">
+  <div class="col">
+    <div class="title">
+      <h1><span class="rose">A</span>ssociation<br>
+        <span class="vert">D</span>épartementale<br>
+        de <span class="rouge">S</span>auvegarde<br>
+        de l’<span class="turquoise">E</span>nfance,<br>
+        de l’<span class="rose">A</span>dolescence<br>
+        et des <span class="vert">A</span>dultes <br>
+        en<span></span> difficulté<br>
+        du <span class="rouge">V</span>ar</h1>
+    </div>
+  </div>
+  <div class="col">
+    <div id="rosace">
+      <%= image_tag "rosace.png" %>
+      <button class="btn btn-danger">Découvrir</button>
+    </div>
+  </div>
+</div>
+
+
 <h3>Etat d'avancement du travail</h3>
 <p>Liste des Elements Implémentés</p>
 <h4>Les pôles</h4>
 <ul>
   <% @poles.each do |pole| %>
-    <li>
-      <%= pole.nom %>
-      <% pole.services.each do |service| %>
-        <p> <%= service.nom %> </p>
-        <% service.antennes.each do |antenne| %>
-        <p> <%= antenne.nom %> </p>
-      <% end %>
-      <% end %>
-    </li>
+  <li>
+    <%= pole.nom %>
+    <% pole.services.each do |service| %>
+    <p> <%= service.nom %> </p>
+    <% service.antennes.each do |antenne| %>
+    <p> <%= antenne.nom %> </p>
+    <% end %>
+    <% end %>
+  </li>
   <% end %>
 </ul>
 <h4>Les sites</h4>
 <ul>
   <% @sites.each do |site| %>
-    <li>
-      <%= site.nom %>
-      <% site.antennes.each do |antenne| %>
-        <p> <%= antenne.nom %> </p>
-      <% end %>
-    </li>
+  <li>
+    <%= site.nom %>
+    <% site.antennes.each do |antenne| %>
+    <p> <%= antenne.nom %> </p>
+    <% end %>
+  </li>
   <% end %>
 </ul>

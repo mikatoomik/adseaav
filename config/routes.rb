@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+  get 'jobs', to: 'pages#jobs', as: :jobs
   resources :poles do
-    resources :services
+    resources :services, only: [:index]
     resources :antennes
   end
   resources :sites
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :services, only: [:index]
 end

@@ -5,4 +5,7 @@ class PagesController < ApplicationController
     @poles = Pole.all
     @sites = Site.all
   end
+
+  def jobs
+  end
 end
