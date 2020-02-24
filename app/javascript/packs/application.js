@@ -8,3 +8,9 @@ import {
 
 
 initMapbox();
+
+import {
+  initRosaceRotate
+} from '../plugins/init_rosace_rotate';
+
+initRosaceRotate();
