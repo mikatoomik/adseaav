@@ -12,19 +12,19 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "Accueil", root_path, class: "nav-link" %>
+          <%= link_to "Accueil", root_path, class: "nav-link hvr-pulse" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Poles", poles_path, class: "nav-link" %>
+          <%= link_to "Poles", poles_path, class: "nav-link hvr-pulse" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Sites", sites_path, class: "nav-link" %>
+          <%= link_to "Sites", sites_path, class: "nav-link hvr-pulse" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Services", services_path, class: "nav-link" %>
+          <%= link_to "Services", services_path, class: "nav-link hvr-pulse" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Jobs", jobs_path, class: "nav-link" %>
+          <%= link_to "Jobs", jobs_path, class: "nav-link hvr-pulse" %>
         </li>
         <li class="nav-item dropdown">
         <% if current_user.photo.attached? %>

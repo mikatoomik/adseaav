@@ -9,10 +9,12 @@
         et des <span class="vert">A</span>dultes <br>
         en<span></span> difficulté<br>
         du <span class="rouge">V</span>ar</h1>
+      <br>
+      <br>
     </div>
   </div>
   <div id="decouvrir" class="col d-flex flex-column align-items-center justify-content-around">
-    <%= image_tag "rosace.png" , id:"rosace", class:""%>
+    <%= image_tag "rosace.png" , id:"rosace" %>
     <div class="d-flex align-items-center">
       <%= link_to poles_path do %>
       <button class="btn btn-outline-danger btn-lg arondi">Découvrir</button>
@@ -21,7 +23,12 @@
     </div>
   </div>
 </div>
-
+<div id="separateur" class="row">
+  <%= image_tag "rosace.png" , id:"rosace-lat" %>
+  <div class="col-4 mx-auto text-center">
+    <i class="fas fa-angle-double-down animated bounce infinite"></i>
+  </div>
+</div>
 
 <h3>Etat d'avancement du travail</h3>
 <p>Liste des Elements Implémentés</p>
