@@ -14,3 +14,9 @@ import {
 } from '../plugins/init_rosace_rotate';
 
 initRosaceRotate();
+
+import {
+  initCardFlip
+} from '../plugins/init_card_flip';
+
+initCardFlip();

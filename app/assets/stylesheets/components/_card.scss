@@ -1,0 +1,53 @@
+// card_value
+.cards_container {
+  align-items: flex-start;
+  height: 212px;
+}
+
+.card_value {
+min-height: 106px;
+justify-content: center;
+flex-basis: 0;
+border-radius: 10px;
+color: white;
+font-weight: bold;
+p {
+  font-size: 0.8em;
+  display: none;
+}
+&.active {
+  p {
+    display: inline;
+  }
+}
+&:nth-child(1) {
+  background: $blue;
+}
+&:nth-child(2) {
+  background: $yellow;
+}
+&:nth-child(3) {
+  background: $pink;
+}
+&:nth-child(4) {
+  background: $turquoise;
+}
+&:nth-child(5) {
+  background: $orange;
+}
+&:nth-child(6) {
+  background: $green;
+}
+
+}
+.card_orientation {
+ // min-height: 106px;
+justify-content: center;
+flex-basis: 0;
+border-radius: 10px;
+// color: white;
+font-weight: bold;
+p {
+  font-size: 0.8em;
+}
+}
