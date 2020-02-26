@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'jobs', to: 'pages#jobs', as: :jobs
   resources :poles do
-    resources :services, only: [:index]
+    resources :services
     resources :antennes
   end
   resources :sites

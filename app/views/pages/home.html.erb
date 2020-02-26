@@ -79,30 +79,3 @@
     </div>
   </div>
 </div>
-<h3>Etat d'avancement du travail</h3>
-<p>Liste des Elements Implémentés</p>
-<h4>Les pôles</h4>
-<ul>
-  <% @poles.each do |pole| %>
-  <li>
-    <%= pole.nom %>
-    <% pole.services.each do |service| %>
-    <p> <%= service.nom %> </p>
-    <% service.antennes.each do |antenne| %>
-    <p> <%= antenne.nom %> </p>
-    <% end %>
-    <% end %>
-  </li>
-  <% end %>
-</ul>
-<h4>Les sites</h4>
-<ul>
-  <% @sites.each do |site| %>
-  <li>
-    <%= site.nom %>
-    <% site.antennes.each do |antenne| %>
-    <p> <%= antenne.nom %> </p>
-    <% end %>
-  </li>
-  <% end %>
-</ul>

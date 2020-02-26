@@ -1,9 +1,9 @@
 .footer {
-  background: #F4F4F4;
+  background:$gray;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  max-height: 150px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
 }
@@ -23,4 +23,19 @@
 }
 .footer .fa-heart {
   color: #D23333;
+}
+
+.footer-menu-bas a {
+  color: black;
+  opacity: 0.55;
+  text-decoration: none;
+  padding: 0px 5px;
+  &:hover {
+    opacity: 1;
+  }
+}
+.footer-menu-bas {
+  ul {
+    list-style: none;
+  }
 }

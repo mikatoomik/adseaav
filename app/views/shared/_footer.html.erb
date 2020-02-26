@@ -1,12 +1,55 @@
 <div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
+  <div class="col-4">
+    <div class="footer-menu-bas">
+      <ul>
+        <li><%= link_to "Nos Pôles", poles_path %></li>
+        <li><%= link_to "Nos Sites", sites_path %></li>
+        <li><%= link_to "Nos Services", services_path %></li>
+        <li><%= link_to "Nous rejoindre", jobs_path %></li>
+      </ul>
+    </div>
   </div>
-  <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  <div class="col-4">
+    <div class="footer-news">
+      <h5>Newsletter</h5>
+      <p>Recevez nos offres d'emploi, nos infos, nos actualités</p>
+    </div>
+    <div class="footer-copyright">
+      Site réalisé en mars 2020 par Glumy.tech
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="footer-links d-flex justify-content-end">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-contact  d-flex justify-content-end">
+      <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#formulaireModal">
+        Nous contacter
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="formulaireModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Formulaire de contact</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        a venir
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
   </div>
 </div>
