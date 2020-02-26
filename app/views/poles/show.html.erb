@@ -1,45 +1,45 @@
-<div class="content  <%= theme(@pole.nom) %>">
+<div id="poles" class="content  <%= theme(@pole.nom) %> mx-n3 ">
   <header class="p-3 mb-2 text-white">
     <div class="row d-flex">
       <div class="col">
-      <h2>
-        <%= @pole.nom %><br>
-      </h2>
-      <p>
-        <%= @pole.adresse %><br>
-        <%= @pole.adresse2 %><br>
-        <%= @pole.code_postal %> <%= @pole.ville %><br>
-        <%= @pole.tel %><br>
-        <!-- Button trigger modal -->
-        <% if policy(@pole).edit? %>
-        <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#adresseModal">
+        <h1>
+          <%= @pole.nom %><br>
+        </h1>
+        <p>
+          <%= @pole.adresse %><br>
+          <%= @pole.adresse2 %><br>
+          <%= @pole.code_postal %> <%= @pole.ville %><br>
+          <%= @pole.tel %><br>
+          <!-- Button trigger modal -->
+          <% if policy(@pole).edit? %>
+          <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#adresseModal">
             <i class="fas fa-pencil-alt"></i>
-        </button>
-        <% end %>
-      </p>
+          </button>
+          <% end %>
+        </p>
       </div>
       <div class="col d-flex flex-column-reverse">
         <div class="bulle d-flex justify-content-center align-items-center">
           <div class="bulle-text">
-        <!-- Button trigger modal -->
-        <% if policy(@pole).edit? %>
-        <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#bulleModal">
-            <i class="fas fa-pencil-alt"></i>
-        </button>
-        <% end %>
+            <!-- Button trigger modal -->
+            <% if policy(@pole).edit? %>
+            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#bulleModal">
+              <i class="fas fa-pencil-alt"></i>
+            </button>
+            <% end %>
             <%= raw( @pole.bulle ) %>
           </div>
         </div>
       </div>
     </div>
   </header>
-  <div class="row  bg-light m-3 rounded-pill">
+  <div id="pill" class="row  bg-light my-3">
     <div class="col p-5">
       <p class="ml-5 pt-5 pb-3 pl-2 text-justify">
         <!-- Button trigger modal -->
         <% if policy(@pole).edit? %>
         <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#descriptionModal">
-            <i class="fas fa-pencil-alt"></i>
+          <i class="fas fa-pencil-alt"></i>
         </button>
         <% end %>
         <%= raw( @pole.description ) %>
@@ -47,35 +47,38 @@
     </div>
     <div class="col p-5">
       <!-- Button trigger modal -->
-        <% if policy(@pole).edit? %>
-        <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#principeModal">
-            <i class="fas fa-pencil-alt"></i>
-        </button>
-        <% end %>
+      <% if policy(@pole).edit? %>
+      <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#principeModal">
+        <i class="fas fa-pencil-alt"></i>
+      </button>
+      <% end %>
       <p>
         <%= raw( @pole.principe ) %>
       </p>
     </div>
   </div>
-  <div class="row service">
+  <div class="row service text-justify">
     <div class="col mx-5 px-5">
-    <% @pole.services.each do |service| %>
+      <% @pole.services.sort.each do |service| %>
       <h3><%= service.nom %></h3>
       <% if policy(@pole).edit? %>
-        <%= link_to edit_pole_service_path(@pole, service) do %>
-          <i class="fas fa-pencil-alt"></i>
-        <% end %>
+      <%= link_to edit_pole_service_path(@pole, service) do %>
+      <i class="fas fa-pencil-alt"></i>
+      <% end %>
       <% end %>
       <%= raw(service.description) %>
       <div class="row mission">
         <div class="col-6">
-        <%= raw(service.mission) %>
+          <%= raw(service.mission) %>
         </div>
         <div class="col-6">
-        <%= raw(service.modalités) %>
+          <%= raw(service.modalités) %>
         </div>
       </div>
-    <% end %>
+      <div class="separateur w-100 my-2">
+        <br><br>
+      </div>
+      <% end %>
     </div>
   </div>
 
@@ -86,7 +89,8 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="adresseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="adresseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -97,12 +101,12 @@
       </div>
       <div class="modal-body">
         <%= simple_form_for @pole do |f| %>
-          <%= f.input :adresse %>
-          <%= f.input :adresse2 %>
-          <%= f.input :code_postal %>
-          <%= f.input :ville %>
-          <%= f.input :tel %>
-          <%= f.input :email %>
+        <%= f.input :adresse %>
+        <%= f.input :adresse2 %>
+        <%= f.input :code_postal %>
+        <%= f.input :ville %>
+        <%= f.input :tel %>
+        <%= f.input :email %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
@@ -114,7 +118,8 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="bulleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="bulleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -125,7 +130,7 @@
       </div>
       <div class="modal-body">
         <%= simple_form_for @pole do |f| %>
-          <%= f.input :bulle %>
+        <%= f.input :bulle %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
@@ -137,7 +142,8 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="descriptionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="descriptionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -148,7 +154,7 @@
       </div>
       <div class="modal-body">
         <%= simple_form_for @pole do |f| %>
-          <%= f.input :description %>
+        <%= f.input :description %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
@@ -160,7 +166,8 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="principeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="principeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -171,7 +178,7 @@
       </div>
       <div class="modal-body">
         <%= simple_form_for @pole do |f| %>
-          <%= f.input :principe %>
+        <%= f.input :principe %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>

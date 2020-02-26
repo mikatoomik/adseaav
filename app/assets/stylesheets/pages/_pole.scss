@@ -1,13 +1,40 @@
+#poles {
+  h1 {
+  font-size: 5rem;
+  text-align-last: right;
+}
+color: white;
+
+.header {
+  position: absolute;
+}
+
+.separateur {
+  background-image: url('separateur.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-clip: border-box;
+}
+
+}
+
 .mo {
   background-color: $turquoise;
+  h1 {
+    margin-left: -75px;
+    margin-right: 100px;
+  }
   header > div {
     flex-direction: row-reverse !important;
   }
-
   .bulle {
-    background-image: url('orange.png');
+    background-image: url('rouge-g.png');
   }
-
+  #pill {
+    border-radius: 10% 36% 65% 31%;
+    color:$blue;
+  }
   ul {
     list-style: url('rouge_bullet.png');
   }
@@ -23,6 +50,18 @@
   .service {
     h4 {
       color: $yellow;
+    }
+     p {
+      color: white;
+    }
+    div > div:nth-child(14) {
+      padding: 24px 0px 0px 16px;
+      h5 {
+        color: $turquoise;
+      }
+      border-radius:3% 20% 17% 21%;
+      background-color: white;
+      color: $blue;
     }
   }
 
@@ -142,6 +181,9 @@
 
 .heb {
   background: $pink;
+  header > div {
+    flex-direction: row-reverse !important;
+  }
 
   .bulle {
     background-image: url('jaune.png');
@@ -156,11 +198,4 @@
   }
 }
 
-h2,
-.h2 {
-  font-size: 5rem;
-}
 
-.header {
-  position: absolute;
-}
