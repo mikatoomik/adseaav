@@ -1,10 +1,67 @@
-<h1>Poles</h1>
-<ol>
-  <% @poles.each do |pole| %>
+<div class="row">
+  <h1>Poles</h1>
+  <div class="col-4 mx-auto">
+    <%= image_tag "rosace.png" , id:"rosace_poles" %>
+    <%= link_to pole_path(@poles[4]) do %>
+    <div id="bulle_mo">
+      <div class="bulle_text">
+        <h5><%= @poles[4].nom %></h5>
+        <% @poles[4].services.each do |service| %>
+        <p><%= service.nom %></p>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+    <%= link_to pole_path(@poles[2]) do %>
+    <div id="bulle_mna">
+      <div class="bulle_text">
+        <h5><%= @poles[2].nom %></h5>
+        <% @poles[2].services.each do |service| %>
+        <p><%= service.nom %></p>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+    <%= link_to pole_path(@poles[3]) do %>
+    <div id="bulle_ssi">
+      <div class="bulle_text">
+        <h5><%= @poles[3].nom %></h5>
+        <% @poles[3].services.each do |service| %>
+        <p><%= service.nom.scan(/(?!par)\p{L}{3,}/).map(&:first).join(' ') %></p>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+    <%= link_to pole_path(@poles[0]) do %>
+    <div id="bulle_heb">
+      <div class="bulle_text">
+        <h5><%= @poles[0].nom %></h5>
+        <% @poles[0].services.each do |service| %>
+        <p><%= service.nom.scan(/(?!par)\p{L}{3,}/).map(&:first).join(' . ') %></p>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+    <%= link_to pole_path(@poles[1]) do %>
+    <div id="bulle_res">
+      <div class="bulle_text">
+        <h5><%= @poles[1].nom %></h5>
+        <% @poles[1].services.each do |service| %>
+        <p><%= service.nom %></p>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+  <ol>
+    <% @poles.each do |pole| %>
     <li>
       <% if policy(pole).show? %>
-        <%= link_to pole.nom, pole_path(pole)  %>
+      <%= link_to pole.nom, pole_path(pole)  %>
       <% end %>
     </li>
-  <% end %>
-</ol>
+    <% end %>
+  </ol>
+
+</div>

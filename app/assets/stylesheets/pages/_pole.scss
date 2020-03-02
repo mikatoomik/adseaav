@@ -198,4 +198,165 @@ color: white;
   }
 }
 
+// design de la rosace page poles avec chaque bulle
 
+#rosace_poles {
+  position: relative;
+}
+
+#bulle_mo {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-clip: border-box;
+  height: 245px;
+  width: 234px;
+  text-align: center;
+  letter-spacing: -2px;
+  line-height: 50%;
+  opacity: 0;
+  background-image: url('turquoise.png');
+  position: absolute;
+  top: 0px;
+  margin: 0px 96px;
+  transform: rotate(180deg);
+  transition: width 1s, height 1s, ease-in-out 1s, transform 1s;
+  &:hover {
+    color: white;
+    letter-spacing: normal;
+    line-height: 80%;
+    opacity: 1;
+    height: 330px;
+    width: 410px;
+    transform: rotate(0deg);
+  }
+  .bulle_text {
+    margin-top: 120px;
+  }
+}
+
+#bulle_mna {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-clip: border-box;
+  height: 245px;
+  width: 234px;
+  text-align: center;
+  letter-spacing: -2px;
+  line-height: 50%;
+  opacity: 0;
+  background-image: url('orange.png');
+  position: absolute;
+  top: 40px;
+  right: -5px;
+  transform: rotate(-127deg);
+  transition: width 2s, height 2s, ease-in-out 2s, transform 2s;
+  &:hover {
+    color: white;
+    letter-spacing: normal;
+    line-height: 90%;
+    padding: 58px 40px 0 40px;
+    opacity: 1;
+    height: 330px;
+    width: 410px;
+    transform: rotate(0deg);
+  }
+  .bulle_text {
+    margin-top: 80px;
+  }
+}
+
+#bulle_ssi {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-clip: border-box;
+  height: 247px;
+  width: 235px;
+  text-align: center;
+  letter-spacing: -2px;
+  line-height: 20%;
+  opacity: 0;
+  background-image: url('vert.png');
+  position: absolute;
+  bottom: 46px;
+  right: -10px;
+  transform: rotate(-53deg);
+  transition: width 2s, height 2s, ease-in-out 2s, transform 2s;
+  &:hover {
+    color: white;
+    letter-spacing: normal;
+    line-height: 90%;
+    padding: 23px 40px 0 40px;
+    opacity: 1;
+    height: 330px;
+    width: 410px;
+    transform: rotate(0deg);
+  }
+  .bulle_text {
+    margin-top: 80px;
+  }
+}
+
+#bulle_heb {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-clip: border-box;
+  height: 264px;
+  width: 239px;
+  text-align: center;
+  letter-spacing: -2px;
+  line-height: normal;
+  opacity: 0;
+  background-image: url('rose.png');
+  position: absolute;
+  top: 36px;
+  left: 25px;
+  transform: rotate(126deg);
+  transition: width 2s, height 2s, ease-in-out 2s, transform 2s;
+  &:hover {
+    color: white;
+    letter-spacing: normal;
+    padding: 23px 40px 0 40px;
+    opacity: 1;
+    height: 330px;
+    width: 410px;
+    transform: rotate(0deg);
+  }
+  .bulle_text {
+    margin-top: 120px;
+  }
+}
+
+#bulle_res {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-clip: border-box;
+  height: 264px;
+  width: 247px;
+  text-align: center;
+  letter-spacing: -2px;
+  line-height: normal;
+  opacity: 0;
+  background-image: url('jaune.png');
+  position: absolute;
+  top: 162px;
+  left: 23px;
+  transform: rotate(52deg);
+  transition: width 2s, height 2s, ease-in-out 2s, transform 2s;
+  &:hover {
+    color: white;
+    letter-spacing: normal;
+    padding: 23px 40px 0 40px;
+    opacity: 1;
+    height: 330px;
+    width: 410px;
+    transform: rotate(0deg);
+  }
+  .bulle_text {
+    margin: 90px 30px;
+  }
+}
