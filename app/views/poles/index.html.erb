@@ -1,17 +1,48 @@
 <div class="row">
-  <h1>Poles</h1>
-  <div class="col-4 mx-auto">
-    <%= image_tag "rosace.png" , id:"rosace_poles" %>
-    <%= link_to pole_path(@poles[4]) do %>
-    <div id="bulle_mo">
-      <div class="bulle_text">
-        <h5><%= @poles[4].nom %></h5>
-        <% @poles[4].services.each do |service| %>
-        <p><%= service.nom %></p>
-        <% end %>
-      </div>
+  <div class="col-4">
+    <h1>Les Pôles</h1>
+    <p>Notre association est organisée en Pôles opérationnels</p>
+    <div id="chiffres">
+      <h3>En quelques chiffres...</h3>
+      <ul>
+        <li>
+          <h4>Conseil d'administration</h4>
+          <p><span class="text-info">11</span> membres bénévoles dont <span class="text-info">5</span> forment le bureau
+          </p>
+        </li>
+        <li>
+          <h4>Siège-direction</h4>
+          <p><span class="text-info">11</span> personnes</p>
+        </li>
+        <li>
+          <h4>Professionnels</h4>
+          <p><span class="text-warning">plus de 300 </span>Equivalents Temps Plein</p>
+        </li>
+        <li>
+          <h4>Encadrement</h4>
+          <p><span class="text-success">1</span> Directeur Général
+            <br>
+            <span class="text-success">5</span> Directrice des Ressources Humaines
+            <br>
+            <span class="text-success">5</span> Directeurs de Pôle
+            <br>
+            <span class="text-success">19</span> Chefs de service</p>
+        </li>
+        <li>
+          <h4>Activité</h4>
+          <p><span class="text-warning">7 500 </span>mesures par an</p>
+        </li>
+        <li>
+          <h4>Intervention</h4>
+          <p>sur l'ensemble du Département <br>
+            (<span class="text-info">24 </span>sites administratifs)</p>
+        </li>
+      </ul>
     </div>
-    <% end %>
+  </div>
+  <div class="col-4">
+    <h6>survolez la rosace</h6>
+    <%= image_tag "rosace.png" , id:"rosace_poles" %>
     <%= link_to pole_path(@poles[2]) do %>
     <div id="bulle_mna">
       <div class="bulle_text">
@@ -52,16 +83,105 @@
       </div>
     </div>
     <% end %>
-  </div>
-
-  <ol>
-    <% @poles.each do |pole| %>
-    <li>
-      <% if policy(pole).show? %>
-      <%= link_to pole.nom, pole_path(pole)  %>
-      <% end %>
-    </li>
+    <%= link_to pole_path(@poles[4]) do %>
+    <div id="bulle_mo">
+      <div class="bulle_text">
+        <h5><%= @poles[4].nom %></h5>
+        <% @poles[4].services.each do |service| %>
+        <p><%= service.nom %></p>
+        <% end %>
+      </div>
+    </div>
     <% end %>
-  </ol>
+  </div>
+  <div id="col-droite" class="col-4">
+    <div class="d-flex flex-column align-items-end">
+      <div class="first-item m-3">
+        <h4>Explorez les différents pôles :</h4>
+        <ul>
+          <% @poles.each do |pole| %>
+          <li>
+            <% if policy(pole).show? %>
+            <%= link_to pole.nom, pole_path(pole)  %>
+            <% end %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="second-item m-3">
+        <h4>L'histoire</h4>
+        <p class="text-justify mx-3">L'Association Départementale de SAuvegarde de l'Enfance, de l'Adolescence et des
+          Adultes en
+          difficulté du Var est
+          née le <span class="text-success">14 Janvier 1947</span>; elle portait alors le nom d'Association Toulonnaise
+          de
+          Protection de l'Enfance.</p>
+      </div>
+      <div class="third-item m3">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-primary arondi m-2" data-toggle="modal"
+          data-target="#ModalPresident">
+          Mot de Pierre Crapanzano<br>Président
+        </button>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-secondary arondi px-4 m-2" data-toggle="modal"
+          data-target="#ModalDirecteur">
+          Mot de Laurent Savoye<br>Directeur Général
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
+<!-- Modal President-->
+<div class="modal fade" id="ModalPresident" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Mot de Pierre Crapanzano<br>Président</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-justify">
+        Notre association vient de dépasser les 70 ans d’existence avec un effectif de plus de 350 personnes et un
+        budget de 26 M€. Elle est un acteur important dans le département du Var pour l’aide aux personnes en difficulté
+        et a dû et su en permanence adapter sa réponse aux besoins et exigences sans cesse grandissants.
+        <br>Ce développement n’a pu se faire qu’en s’appuyant sur des valeurs fortes et partagées et chacun d’entre nous
+        peut ainsi être fier en présentant l’association.
+        <br> Son futur est inscrit dans ce passé.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Directeur-->
+<div class="modal fade" id="ModalDirecteur" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Mot de Laurent Savoye<br>Directeur Général</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-justify">
+        Dans un environnement en pleine mutation, La Sauvegarde du Var ambitionne de fournir aux adultes aux
+        adolescents, aux enfants et aux familles des prestations répondant aux besoins de ces derniers.
+        <br>Ce site détaille l’ensemble de nos activités en soulignant la diversité de notre plateau technique et la
+        complémentarité de nos établissements et services.<br>
+        Grâce à l’investissement de ses salariés, la confiance des financeurs et la richesse de nos partenariats,
+        l’ADSEAAV est
+        en capacité de relever les nouveaux défis proposés par la société.
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
