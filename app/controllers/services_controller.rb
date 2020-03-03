@@ -1,7 +1,11 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: %i[show edit update]
   def index
-    @services = policy_scope(Service)
+    if params[:query].present?
+      @services = policy_scope(Service.search_in_all_column("%#{params[:query]}%"))
+    else
+      @services = policy_scope(Service)
+    end
   end
 
   def show

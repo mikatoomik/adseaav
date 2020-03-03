@@ -1,7 +1,33 @@
 <header>
   <h3 class="text-center">Les Services de l'ADSEAAV</h3>
-</header>
+  <div class="row">
+    <div class="col">
+      <div class="bg-info arondi m-3 p-3 ">
+        <h5>Filtrez par nom, par problématique, par âge</h5>
+      </div>
+    </div>
+    <div class="col">
+      <div id="recherche" class="btn btn-success arondi btn-block">
+        <form class="form-inline">
+          <div class="form-group mb-2">
+            <%= form_tag services_path, method: :get do %>
+            <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Recherche"
+      %>
+          </div>
+          <div class="form-group mx-sm-3 mb-2">
+            <%= submit_tag "Chercher", class:"btn btn-success" %>
+            <% end %>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
+
+</header>
 <div class="d-flex flex-wrap">
   <% @services.each do |service| %>
   <div class="card mx-1 mb-3 " style="width: 18rem;">
@@ -12,7 +38,7 @@
     <div class="card-body">
       <h6 class="card-subtitle text-muted"><%= service.pole.nom %></h6>
       <p class="card-text">
-        <%= raw(service.description) %>
+        <%= raw(service.resume) %>
       </p>
     </div>
     <div class="card-footer text-muted">
