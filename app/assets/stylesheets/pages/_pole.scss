@@ -1,13 +1,24 @@
-#chiffres {
-  ul {
-    list-style: url('rouge_bullet.png');
-  }
-}
 #col-droite {
+  padding-left: 1%;
   ul {
     list-style: url('jaune_bullet.png');
   }
+  h6 {
+    font-weight: bold;
+  }
 }
+#col-gauche {
+  padding-right: 1%;
+  ul {
+    list-style: none;
+  }
+
+}
+
+#mots * {
+  font-size: 0.8rem;
+}
+
 #poles {
   h1 {
   font-size: 5rem;
