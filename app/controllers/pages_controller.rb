@@ -6,6 +6,4 @@ class PagesController < ApplicationController
     @sites = Site.all
   end
 
-  def jobs
-  end
 end
