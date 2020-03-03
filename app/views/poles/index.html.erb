@@ -1,5 +1,5 @@
 <div class="row">
-  <div id="col-gauche" class="col-3">
+  <div id="col-gauche" class="col-12 col-md-3">
     <h1>Les Pôles</h1>
     <p>Notre association est organisée en Pôles opérationnels</p>
     <div class="first-item m-3">
@@ -26,74 +26,76 @@
 
 
   </div>
-  <div class="col-6 text-center">
+  <div class="col-12 col-md-6 text-center">
     <h6>survolez la rosace</h6>
-    <%= image_tag "rosace.png" , id:"rosace_poles" %>
-    <%= link_to pole_path(@poles[2]) do %>
-    <div id="bulle_mna">
-      <div class="bulle_text">
-        <h5><%= @poles[2].nom %></h5>
-        <% @poles[2].services.each do |service| %>
-        <p><%= service.nom %></p>
-        <% end %>
+    <div id="rosace_poles">
+      <%= image_tag "rosace.png" %>
+      <%= link_to pole_path(@poles[2]) do %>
+      <div id="bulle_mna">
+        <div class="bulle_text">
+          <h5><%= @poles[2].nom %></h5>
+          <% @poles[2].services.each do |service| %>
+          <p><%= service.nom %></p>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <% end %>
-    <%= link_to pole_path(@poles[3]) do %>
-    <div id="bulle_ssi">
-      <div class="bulle_text">
-        <h5><%= @poles[3].nom %></h5>
-        <% @poles[3].services.each do |service| %>
-        <p><%= service.nom.scan(/(?!par)\p{L}{3,}/).map(&:first).join(' ') %></p>
-        <% end %>
+      <% end %>
+      <%= link_to pole_path(@poles[3]) do %>
+      <div id="bulle_ssi">
+        <div class="bulle_text">
+          <h5><%= @poles[3].nom %></h5>
+          <% @poles[3].services.each do |service| %>
+          <p><%= service.nom.scan(/(?!par)\p{L}{3,}/).map(&:first).join(' ') %></p>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <% end %>
-    <%= link_to pole_path(@poles[0]) do %>
-    <div id="bulle_heb">
-      <div class="bulle_text">
-        <h5><%= @poles[0].nom %></h5>
-        <% @poles[0].services.each do |service| %>
-        <p><%= service.nom.scan(/(?!par)\p{L}{3,}/).map(&:first).join(' . ') %></p>
-        <% end %>
+      <% end %>
+      <%= link_to pole_path(@poles[0]) do %>
+      <div id="bulle_heb">
+        <div class="bulle_text">
+          <h5><%= @poles[0].nom %></h5>
+          <% @poles[0].services.each do |service| %>
+          <p><%= service.nom.scan(/(?!par)\p{L}{3,}/).map(&:first).join(' . ') %></p>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <% end %>
-    <%= link_to pole_path(@poles[1]) do %>
-    <div id="bulle_res">
-      <div class="bulle_text">
-        <h5><%= @poles[1].nom %></h5>
-        <% @poles[1].services.each do |service| %>
-        <p><%= service.nom %></p>
-        <% end %>
+      <% end %>
+      <%= link_to pole_path(@poles[1]) do %>
+      <div id="bulle_res">
+        <div class="bulle_text">
+          <h5><%= @poles[1].nom %></h5>
+          <% @poles[1].services.each do |service| %>
+          <p><%= service.nom %></p>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <% end %>
-    <%= link_to pole_path(@poles[4]) do %>
-    <div id="bulle_mo">
-      <div class="bulle_text">
-        <h5><%= @poles[4].nom %></h5>
-        <% @poles[4].services.each do |service| %>
-        <p><%= service.nom %></p>
-        <% end %>
+      <% end %>
+      <%= link_to pole_path(@poles[4]) do %>
+      <div id="bulle_mo">
+        <div class="bulle_text">
+          <h5><%= @poles[4].nom %></h5>
+          <% @poles[4].services.each do |service| %>
+          <p><%= service.nom %></p>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <% end %>
-    <div id="mots" class="d-flex flex-row justify-content-center mt-5">
-      <div class="third-item m3">
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary arondi m-2" data-toggle="modal" data-target="#ModalPresident">
-          Mot de Pierre Crapanzano<br>Président
-        </button>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-secondary arondi px-4 m-2" data-toggle="modal"
-          data-target="#ModalDirecteur">
-          Mot de Laurent Savoye<br>Directeur Général
-        </button>
+      <% end %>
+      <div id="mots" class="d-flex flex-row justify-content-center mt-5">
+        <div class="third-item m3">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary arondi m-2 hvr-wobble-vertical" data-toggle="modal" data-target="#ModalPresident">
+            Mot de Pierre Crapanzano<br>Président
+          </button>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-secondary arondi px-4 m-2 hvr-wobble-vertical" data-toggle="modal"
+            data-target="#ModalDirecteur">
+            Mot de Laurent Savoye<br>Directeur Général
+          </button>
+        </div>
       </div>
     </div>
   </div>
-  <div id="col-droite" class="col-3">
+  <div id="col-droite" class="col-12 col-md-3">
     <div class="d-flex flex-column align-items-end">
       <div id="chiffres">
         <h3>En quelques chiffres...</h3>

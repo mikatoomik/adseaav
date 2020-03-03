@@ -1,1 +1,27 @@
-services
+<header>
+  <h3 class="text-center">Les Services de l'ADSEAAV</h3>
+</header>
+
+<div class="d-flex flex-wrap">
+  <% @services.each do |service| %>
+  <div class="card mx-1 mb-3 " style="width: 18rem;">
+    <div class="card-header">
+      <h5 class="card-title">
+        <%= service.nom %></h5>
+    </div>
+    <div class="card-body">
+      <h6 class="card-subtitle text-muted"><%= service.pole.nom %></h6>
+      <p class="card-text">
+        <%= raw(service.description) %>
+      </p>
+    </div>
+    <div class="card-footer text-muted">
+      <ul>
+        <% service.antennes.each do |antenne| %>
+        <li><%= antenne.nom %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <% end %>
+</div>
