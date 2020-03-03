@@ -20,3 +20,9 @@ import {
 } from '../plugins/init_card_flip';
 
 initCardFlip();
+
+import {
+  initTypetext
+} from '../plugins/init_typetext';
+
+initTypetext();
