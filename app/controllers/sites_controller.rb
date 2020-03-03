@@ -1,4 +1,5 @@
 class SitesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index]
   def index
     @sites = policy_scope(Site.geocoded)
     # @sites = Site.geocoded # returns sites with coordinates

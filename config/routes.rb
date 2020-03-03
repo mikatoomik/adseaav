@@ -7,5 +7,5 @@ Rails.application.routes.draw do
     resources :antennes
   end
   resources :sites
-  resources :services, only: [:index]
+  resources :services
 end

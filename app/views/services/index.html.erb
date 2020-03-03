@@ -38,6 +38,12 @@
     <div class="card-body">
       <h6 class="card-subtitle text-muted"><%= service.pole.nom %></h6>
       <p class="card-text">
+        <% if policy(service).edit? %>
+        <%= simple_form_for(service) do |f| %>
+        <%= f.input :resume %>
+        <%= f.button :submit,  "Mettre à jour"%>
+        <% end %>
+        <% end %>
         <%= raw(service.resume) %>
       </p>
     </div>

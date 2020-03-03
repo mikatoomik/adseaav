@@ -1,4 +1,5 @@
 class ServicesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index]
   before_action :set_service, only: %i[show edit update]
   def index
     if params[:query].present?
@@ -28,6 +29,6 @@ class ServicesController < ApplicationController
   end
 
   def service_params
-    params.require(:service).permit(:description, :mission, :modalités, :nom)
+    params.require(:service).permit(:description, :mission, :modalités, :nom, :resume)
   end
 end

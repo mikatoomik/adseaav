@@ -9,6 +9,10 @@ class ServicePolicy < ApplicationPolicy
   end
 
   def update?
-    user.admin
+    if user
+      user.admin
+    else
+      false
+    end
   end
 end
