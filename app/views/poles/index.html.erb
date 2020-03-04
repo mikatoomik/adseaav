@@ -1,9 +1,11 @@
 <div class="row">
   <div id="col-gauche" class="col-12 col-md-3">
-    <h1>Les Pôles</h1>
+    <div class="title">
+      <h1>Les <span>P</span>ôles</h1>
+    </div>
     <p>Notre association est organisée en Pôles opérationnels</p>
     <div class="first-item m-3">
-      <h3>Explorez les différents pôles :</h3>
+      <!-- <h3>Explorez les différents pôles :</h3> -->
       <ul>
         <% @poles.each do |pole| %>
         <li>
@@ -27,9 +29,9 @@
 
   </div>
   <div class="col-12 col-md-6 text-center">
-    <h6>survolez la rosace</h6>
     <div id="rosace_poles">
       <%= image_tag "rosace.png" %>
+      <span class="text-secondary">survolez la rosace</span>
       <%= link_to pole_path(@poles[2]) do %>
       <div id="bulle_mna">
         <div class="bulle_text">
@@ -83,7 +85,8 @@
       <div id="mots" class="d-flex flex-row justify-content-center mt-5">
         <div class="third-item m3">
           <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary arondi m-2 hvr-wobble-vertical" data-toggle="modal" data-target="#ModalPresident">
+          <button type="button" class="btn btn-primary arondi m-2 hvr-wobble-vertical" data-toggle="modal"
+            data-target="#ModalPresident">
             Mot de Pierre Crapanzano<br>Président
           </button>
           <!-- Button trigger modal -->
@@ -98,7 +101,7 @@
   <div id="col-droite" class="col-12 col-md-3">
     <div class="d-flex flex-column align-items-end">
       <div id="chiffres">
-        <h3>En quelques chiffres...</h3>
+        <!-- <h3>En quelques chiffres...</h3> -->
         <ul>
           <li>
             <h6>Conseil d'administration</h6>

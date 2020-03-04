@@ -5,8 +5,26 @@
 body {
   color: $blue;
 }
-.title h1 {
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+#banner {
+  background-image: url('images_back.png');
+  background-repeat: repeat-x;
+  background-clip: content-box;
+  animation: animatedBackground 10s linear infinite alternate;
+  padding: 0 15px;
+}
+.title-home {
   text-align: right;
+}
+.title h1 {
   font-weight: bold;
   span {
     font-size: 130%;
