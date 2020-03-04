@@ -1,0 +1,20 @@
+@keyframes animatedgallery {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+.banner {
+  height: 280px;
+  background-image: url('galerie-job.png');
+  background-repeat: repeat-x;
+  background-clip: content-box;
+  animation: 24s linear infinite running animatedgallery;
+}
+
+.galerie-job {
+  background-color: $orange;
+}
