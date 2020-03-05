@@ -4,7 +4,7 @@
       <div class="card mx-1 mb-3 " style="width: 18rem;">
         <div class="card-header">
           <% if policy(job).edit? %>
-          <%= link_to job_path(job), method:'DELETE', alerte: 'attention' do %>
+          <%= link_to job_path(job), method:'DELETE' do %>
           <i class="fas fa-trash-alt"></i>
           <% end %>
           <% end %><h5 class="card-title">
@@ -25,7 +25,7 @@
             <%= "Date de fin : #{l(job.date_fin, format: :long, locale: :'fr')}" if job.contrat != "CDI" %>
 
           </p>
-          <%= link_to job_path(job), anchor: "presentation" do %>
+          <%= link_to job_path(job, anchor: "presentation") do %>
           <button class="btn btn-outline-success">Lire la description complète</button>
           <% end %>
         </div>
