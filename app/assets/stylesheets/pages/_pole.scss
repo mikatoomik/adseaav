@@ -123,6 +123,15 @@ color: white;
 .mna {
   background: $red;
 
+  #pill {
+    border-radius: 65% 36% 10% 31%;
+    color:$blue;
+  }
+  h1 {
+    color: $yellow;
+    font-weight: bold;
+  }
+
   h2 {
     color: $yellow;
     font-size: 4rem;
@@ -141,7 +150,11 @@ color: white;
     text-align: center;
     position: relative;
     bottom: -130px;
+    .bulle-text {
+      padding-top: 57px;
+    }
   }
+
 
   ul {
     list-style: url('jaune_bullet.png');
@@ -285,9 +298,6 @@ color: white;
     height: 330px;
     width: 410px;
     transform: rotate(0deg);
-  }
-  .bulle_text {
-    margin-top: 80px;
   }
 }
 

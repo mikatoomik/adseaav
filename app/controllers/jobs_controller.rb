@@ -2,7 +2,11 @@ class JobsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_job, only: %i[show edit update destroy]
   def index
-    @jobs = policy_scope(Job)
+    if params[:query].present?
+      @jobs = policy_scope(Job.search_in_jobs("%#{params[:query]}%"))
+    else
+      @jobs = policy_scope(Job)
+    end
   end
 
   def show
