@@ -29,7 +29,7 @@
 
 </header>
 <div class="d-flex flex-wrap">
-  <% @services.each do |service| %>
+  <% @services.sort_by(&:nom).each do |service| %>
   <div class="card mx-1 mb-3 " style="width: 18rem;">
     <div class="card-header <%= theme(service.pole.nom) %>">
       <h5 class="card-title">

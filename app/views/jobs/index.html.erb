@@ -30,31 +30,64 @@
       </div>
     </div>
   </div>
-
-
 </header>
-<div class="d-flex flex-wrap">
-  <% @jobs.each do |job| %>
-  <div class="card mx-1 mb-3 " style="width: 18rem;">
-    <div class="card-header">
-      <h5 class="card-title">
-        <%= job.intitule %></h5>
-    </div>
-    <div class="card-body">
-      <h6 class="card-subtitle text-muted"><%= job.pole.nom %></h6>
-      <p class="card-text">
-        <% if policy(job).edit? %>
-        <%= simple_form_for(job) do |f| %>
-        <%= f.input :resume %>
-        <%= f.button :submit,  "Mettre à jour"%>
-        <% end %>
-        <% end %>
-        <%= raw(job.intitule) %>
-      </p>
-    </div>
-    <div class="card-footer text-muted">
-      <%= job.antenne.nom %>
+<div class="row">
+  <div class="col-9">
+    <div class="d-flex flex-wrap">
+      <% @jobs.each do |job| %>
+      <div class="card mx-1 mb-3 " style="width: 18rem;">
+        <div class="card-header">
+          <h5 class="card-title">
+            <%= job.intitule %></h5>
+        </div>
+        <div class="card-body">
+          <h6 class="card-subtitle text-muted"><%= job.service.nom %></h6>
+          <p class="card-text">
+            <% if policy(job).edit? %>
+              <%= simple_form_for(job) do |f| %>
+                <%= f.input :intitule %>
+                <%= f.input :contrat %>
+                <%= f.input :etp %>
+                <%= f.input :date %>
+                <%= f.input :missions %>
+                <%= f.input :resultats %>
+                <%= f.input :conditions %>
+                <%= f.button :submit,  "Mettre à jour"%>
+              <% end %>
+            <% end %>
+            <%= job.contrat %>
+            <%= job.date %>
+            <%= job.etp %>
+          </p>
+        </div>
+        <div class="card-footer text-muted">
+          <%= job.site.nom %>
+        </div>
+      </div>
+      <% end %>
     </div>
   </div>
-  <% end %>
+  <div class="col-3">
+    <div class="bg-primary arondi m-3 p-3 text-white">
+      <h5>Recevez toutes les offres d’emploi. Inscrivez-vous!</h5>
+      <p>
+        Nos offres d’emploi vous intéressent ? Inscrivez-vous <bR>
+        Recevez des alertes sur les nouvelles opportunités correspondant à vos centres d’intérêt et votre profil<br>
+        Partagez nos offres avec votre réseau</p>
+      <%= link_to poles_path do %>
+      <button class="btn btn-outline-light btn-lg arondi hvr-pulse">Inscrivez-vous</button>
+      <% end %>
+    </div>
+    <div class="bg-danger arondi m-3 p-3 text-white">
+      <h5>Ce que vous savez déjà de nous...</h5>
+      <p>
+        ....</p>
+      <h5>Ce que vous ignorez peut-être...</h5>
+      <p>
+        ....</p>
+      <h5>Ce qu’on vous invite à découvrir...</h5>
+      <p>
+        ....</p>
+    </div>
+  </div>
 </div>

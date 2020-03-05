@@ -12,9 +12,10 @@
   background-image: url('galerie-job.png');
   background-repeat: repeat-x;
   background-clip: content-box;
-  animation: 24s linear infinite running animatedgallery;
+  animation: 48s linear infinite running animatedgallery;
 }
 
 .galerie-job {
   background-color: $orange;
+  text-align: center;
 }

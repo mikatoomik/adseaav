@@ -10,13 +10,13 @@ body {
     background-position: 0 0;
   }
   to {
-    background-position: 100% 0;
+    background-position: 0 100%;
   }
 }
 
 #banner {
-  background-image: url('images_back.png');
-  background-repeat: repeat-x;
+  background-image: url('enfance_adsea.png');
+  background-repeat: no-repeat;
   background-clip: content-box;
   animation: animatedBackground 10s linear infinite alternate;
   padding: 0 15px;
