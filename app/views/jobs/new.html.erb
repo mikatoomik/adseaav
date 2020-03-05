@@ -1,0 +1,14 @@
+<%= simple_form_for @job do |f| %>
+  <%= f.input :intitule %>
+  <%= f.association :service, collection: Service.order(:nom), label_method: :nom, prompt: "Choissez un service" %>
+  <%= f.association :site, collection: Site.order(:nom), label_method: :nom, prompt: "Précisez le site" %>
+  <%= f.input :contrat %>
+  <%= f.input :etp %>
+  <%= f.input :date_debut, html5: true %>
+  <%= f.input :date_fin, html5: true %>
+  <%= f.input :missions %>
+  <%= f.input :resultats %>
+  <%= f.input :conditions %>
+  <%= f.input :ouvert %>
+  <%= f.button :submit,  "Publier l'offre"%>
+<% end %>

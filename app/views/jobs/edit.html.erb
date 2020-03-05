@@ -1,0 +1,11 @@
+<%= simple_form_for @job do |f| %>
+                <%= f.input :intitule %>
+                <%= f.input :contrat %>
+                <%= f.input :etp %>
+                <%= f.input :date_debut %>
+                <%= f.input :date_fin %>
+                <%= f.input :missions %>
+                <%= f.input :resultats %>
+                <%= f.input :conditions %>
+                <%= f.button :submit,  "Mettre à jour"%>
+              <% end %>

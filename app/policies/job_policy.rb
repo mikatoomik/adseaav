@@ -5,14 +5,30 @@ class JobPolicy < ApplicationPolicy
     end
   end
   def show?
-    true # Anyone can view a pole
+    true # Anyone can view a job
   end
 
   def update?
     if user
-      user.admin
+      user.admin || user.rh
     else
       false
     end
   end
+  def create?
+    if user
+      user.admin || user.rh
+    else
+      false
+    end
+  end
+
+  def destroy?
+    if user
+      user.admin || user.rh
+    else
+      false
+    end
+  end
+
 end

@@ -45,6 +45,7 @@ body {
 #rosace {
   width: 418px;
   object-fit: contain;
+  opacity: 0.6;
   }
 #decouvrir {
   overflow: hidden;
@@ -56,13 +57,15 @@ body {
     position: absolute;
     right: -60px;
     bottom: 0px;
+    opacity: 0.6;
 }
 #rosace-lat {
-    width: 300px;
+    width: 150px;
     object-fit: contain;
     position: absolute;
     left: -60px;
     bottom: -80px;
+    opacity: 0.6;
 }
 #separateur {
   position: sticky;
