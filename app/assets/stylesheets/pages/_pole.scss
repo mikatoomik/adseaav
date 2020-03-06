@@ -23,6 +23,7 @@
   h1 {
   font-size: 5rem;
   text-align-last: right;
+  font-weight: bold;
 }
 color: white;
 
@@ -152,6 +153,7 @@ color: white;
     bottom: -130px;
     .bulle-text {
       padding-top: 57px;
+      color: $red;
     }
   }
 
@@ -168,7 +170,7 @@ color: white;
     color: white;
 
     h3 {
-      color: $yellow;
+      color: white;
     }
 
     ul {
@@ -221,6 +223,16 @@ color: white;
 
   .bulle {
     background-image: url('jaune.png');
+    transform: scaleX(-1);
+    .bulle-text {
+      transform: scaleX(-1);
+      color: $primary;
+    }
+  }
+  #pill {
+    border-radius: 175% 84% 88% 75%;
+    color:$blue;
+    text-align: center;
   }
 
   ul {
@@ -228,7 +240,7 @@ color: white;
   }
 
   h4 {
-    color: $red;
+    color: $yellow;
   }
 }
 
@@ -293,7 +305,7 @@ color: white;
     color: white;
     letter-spacing: normal;
     line-height: 90%;
-    padding: 58px 40px 0 40px;
+    padding: 93px 63px 0px 70px;
     opacity: 1;
     height: 330px;
     width: 410px;

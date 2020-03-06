@@ -1,149 +1,90 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
+user = User.new
+user.email = "mikael@atoomik.fr"
+user.password = "password"
+user.admin = false
+user.save
 
-# require "open-uri"
+user = User.new
+user.email = "mika@atoomik.fr"
+user.password = "password"
+user.admin = true
+user.save
 
-# file = URI.open('https://www.google.fr/maps/place/299+Avenue+Paul+Ar%C3%A8ne,+83300+Draguignan/@43.5317129,6.4772255,3a,75y,86.84h,90t/data=!3m7!1e1!3m5!1sO9AlwBizSb1D6QVnPqO4ag!2e0!6s%2F%2Fgeo3.ggpht.com%2Fcbk%3Fpanoid%3DO9AlwBizSb1D6QVnPqO4ag%26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D203%26h%3D100%26yaw%3D86.8399%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656!4m5!3m4!1s0x12ceabf608cd2cd5:0x77deb9114e066b24!8m2!3d43.5317073!4d6.4773206#')
-# site = Site.first
-# site.photo.attach(io: file, filename: 'draguignan.png', content_type: 'image/png')
-site = Site.new
-site.nom = "Le Liberté"
-site.adresse = "281, rue Jean Jaurès"
-site.adresse2 = "Le Liberté - 2ème étage - BP 5171"
-site.code_postal = 83160
-site.ville = "TOULON cedex"
-site.tel = ""
-site.responsable = ""
-site.save
+pole = Pole.new
+  pole.nom  =   "Pôle Hébergement"
+  pole.adresse  =   "281 rue Jean Jaurès"
+  pole.adresse2  =   "Le Liberté - 2ème étage - BP 5171"
+  pole.code_postal  =   83094
+  pole.ville  =   "TOULON cedex"
+  pole.tel  =   "04 94 93 18 12"
+  pole.email  =   "hebergement.toulon@adsea83.org"
+  pole.description  =  ""
+  pole.bulle:
+   "Composé de deux services, le Pôle Hébergement propose à des mineurs et jeunes majeurs (0 à 21 ans) un accueil individuel, diversifié et éclaté."
+  pole.principe:
+   " Le Placement Familial Spécialisé (PFS) s’adresse à des enfants et adolescents confiés et accueillis en famille d’accueil sur l’ensemble du département du Var. Le Réseau Chambres en Ville (RCV) concerne des adolescents et jeunes majeurs confiés et accueillis au sein de logements sur l’aire toulonnaise et dracénoise. Une partie des professionnels du Pôle travaille sur les deux services afin de faciliter la continuité de service. "
+pole.save
 
-site = Site.new
-site.nom = "Saint-Maximin"
-site.adresse = "101, Avenue de la Maximinoise"
-site.adresse2 = "Route d'Aix"
-site.code_postal = 83340
-site.ville = "SAINT MAXIMIN"
-site.tel = "04.94.78.14.92"
-site.responsable = ""
-site.save
+pole = Pole.new
+  pole.nom  =   "Pôle ressources"
+  pole.adresse  =   "230, rue Marcelin Berthelot"
+  pole.adresse2  =   "ZI - La Garde - BP 70008"
+  pole.code_postal  =   83087
+  pole.ville  =   "TOULON Cedex 9"
+  pole.tel  =   ""
+  pole.email  =   "secretariatgeneral.siege@adsea83.org"
+  pole.description  =   ""
+  pole.bulle:
+   "Encadré par la direction généralepole. le pôle ressources centralise la gestion des ressources humaines de l’association, de la comptabilité, des finances, de la logistique et du patrimoine. Ce choix a été effectué pour permettre aux établissements et services de se concentrer sur leur cœur de mission. "
+  principe  =   ""
+pole.save
 
-site = Site.new
-site.nom = "Cogolin"
-site.adresse = "8, Avenue Sigismond Coulet"
-site.adresse2 = "C.C Agora - Lotissement 26/27"
-site.code_postal = 83310
-site.ville = "COGOLIN"
-site.tel = ""
-site.responsable = ""
-site.save
-
-service = Service.find_by nom: 'AEMO FAMILIALE'
-site = Site.find_by nom: 'Fréjus'
-antenne = Antenne.new
-antenne.site_id = site.id
-antenne.service_id = service.id
-antenne.nom = "Equipe de Fréjus"
-antenne.cds = "Layla AMARA"
-antenne.save
-
-site = Site.find_by nom: 'Le Luc'
-antenne = Antenne.new
-antenne.site_id = site.id
-antenne.service_id = service.id
-antenne.nom = "Equipe du Luc"
-antenne.cds = "Bali"
-antenne.save
-
-site = Site.find_by nom: 'Draguignan'
-antenne = Antenne.new
-antenne.site_id = site.id
-antenne.service_id = service.id
-antenne.nom = "Equipe de Draguignan"
-antenne.cds = "Gil Boisgibault"
-antenne.save
-
-site = Site.find_by nom: 'Brignoles'
-antenne = Antenne.new
-antenne.site_id = site.id
-antenne.service_id = service.id
-antenne.nom = "Equipe de Brignoles"
-antenne.cds = "Karine Peslier"
-antenne.save
-
-site = Site.find_by nom: 'La Valette'
-antenne = Antenne.new
-antenne.site_id = site.id
-antenne.service_id = service.id
-antenne.nom = "Equipe de La Valette"
-antenne.cds = ""
-antenne.save
-
-site = Site.find_by nom: 'La Seyne - BREGAILLON'
-antenne = Antenne.new
-antenne.site_id = site.id
-antenne.service_id = service.id
-antenne.nom = "Equipe de La SEYNE : Brégaillon"
-antenne.cds = ""
-antenne.save
-
-site = Site.find_by nom: "La Seyne - L'ESCALE"
-antenne = Antenne.new
-antenne.site_id = site.id
-antenne.service_id = service.id
-antenne.nom = "Equipe de La SEYNE : L'escale"
-antenne.cds = ""
-antenne.save
-
-site = Site.find_by nom: "Hyeres"
-antenne = Antenne.new
-antenne.site_id = site.id
-antenne.service_id = service.id
-antenne.nom = "Equipe de Hyeres"
-antenne.cds = ""
-antenne.save
-
-site = Site.find_by nom: "Le Liberté"
-antenne = Antenne.new
-antenne.site_id = site.id
-antenne.service_id = service.id
-antenne.nom = "Equipe de Toulon : Foch"
-antenne.cds = ""
-antenne.save
-
-site = Site.find_by nom: "Cogolin"
-antenne = Antenne.new
-antenne.site_id = site.id
-antenne.service_id = service.id
-antenne.nom = "Equipe de Cogolin"
-antenne.cds = ""
-antenne.save
-
-site = Site.find_by nom: "Saint-Maximin"
-antenne = Antenne.new
-antenne.site_id = site.id
-antenne.service_id = service.id
-antenne.nom = "Antenne de Saint-Maximin"
-antenne.cds = ""
-antenne.save
-
-service = Service.find_by nom: 'AEMO SPECIAL JEUNES'
-site = Site.find_by nom: 'Draguignan'
-antenne = Antenne.new
-antenne.site_id = site.id
-antenne.service_id = service.id
-antenne.nom = "Equipe Spécial Jeunes de Draguignan"
-antenne.cds = ""
-antenne.save
-
-site = Site.find_by nom: 'La Valette'
-antenne = Antenne.new
-antenne.site_id = site.id
-antenne.service_id = service.id
-antenne.nom = "Equipe Spécial Jeunes de La Valette"
-antenne.cds = ""
-antenne.save
+pole = Pole.new
+  id  =   2,
+  nom  =   "Pôle Mineurs Non Accompagnés (MNA)"pole.
+  adresse  =   "281 rue Jean Jaurès"pole.
+  adresse2  =   "Le Liberté - 2ème étage - BP 5171"pole.
+  code_postal  =   83094pole.
+  ville  =   "TOULON cedex"pole.
+  tel  =   "04.94.12.56.30"pole.
+  email  =   "secretariat.pole.mna@adsea83.org"pole.
+  description:
+   "<h4>Les principes d’intervention :</h4>\r\n<ul>\r\n<li>\tgarantir la primauté de l’intérêt supérieur de l’enfantpole. de ses droits et de ses besoins fondamentaux,</li>\r\n<li>\tassurer une continuité dans le parcours de ces mineurs, parcours pour la plupart jusqu’alors chaotique,</li>\r\n<li>\tindividualiser notre intervention.</li>\r\n</ul>\r\n"pole.
+  bulle:
+   "Art 1 de l’arrêté du 17 novembre 2016 relatif aux modalités de l’évaluation des mineurs privés temporairement ou définitivement de la protection de leur famille :\r\n« Un mineur est considéré comme non accompagné lorsqu’aucune personne majeure n’en est responsable légalement sur le territoire national ou ne le prend effectivement en charge et ne montre sa volonté de se voir durablement confier l’enfant, notamment en saisissant le juge compétent. »"pole.
+  principe:
+   "Ces principes sont donc transversaux au Pôle et guident les actions déployées dans ses différents services et structures, avec pour objectifs prioritaires de :\r\n<ul>\r\n<li>\tIntégrer le mineur dans la société française   =   apprentissage de la langue française, intégration en milieu scolaire… ;</li>\r\n<li>\tFavoriser l’autonomie du jeune pour qu’il puisse à la majorité se prendre en charge ;</li>\r\n<li>\taccompagner les jeunes dans la régularisation administrative de leurs situations.</li>"pole.
+  created_at  =   Tue, 04 Feb 2020 10:03:11 UTC +00:00,
+  updated_at  =   Wed, 19 Feb 2020 11:15:07 UTC +00:00>,
+ #<Pole:0x00007fba6bb2b880
+  id  =   4,
+  nom  =   "Pôle Santé Soin Insertion"pole.
+  adresse  =   nilpole.
+  adresse2  =   nilpole.
+  code_postal  =   nilpole.
+  ville  =   nilpole.
+  tel  =   nilpole.
+  email  =   nilpole.
+  description  =   nilpole.
+  bulle:
+   "Le pôle Santé Soin Insertion (SSI) a pour mission d’accompagner des publics enfants/adolescents et adultes en difficulté par des actions se situant dans le champ médico-social et thérapeutique, et l’insertion socio- professionnelle dans l’objectif de favoriser l’autonomie et le bien être des personnes accueillies.",
+  principe:
+   "Le pôle SSI est composé des établissements et services suivants   =   \r\n\tUn Etablissement et Service d’aide par le Travail « ESAT » dit « hors les murs » :\r\n\tUn Service d’Accompagnement à la Vie Sociale « SAVS »\r\n\tUn Centre Médico Psycho Pédagogique « CMPP »\r\n\tDes Appartements de Coordination Thérapeutique « ACT »\r\n\tDes Lits Halte Soin Santé « LHSS »\r\n\tUne Action Sociale liée au Logement « ASLL » \r\n\tUne Action au Droit liée à l’Habitat « ADLH » \r\n",
+  created_at  =   Tue, 04 Feb 2020 10:03:51 UTC +00:00pole.
+  updated_at  =   Wedpole. 19 Feb 2020 11:43:22 UTC +00:00>pole.
+ #<Pole:0x00007fba6bb2b560
+  id  =   1pole.
+  nom  =   "Pôle Milieu Ouvert"pole.
+  adresse  =   "281 rue Jean Jaurès"pole.
+  adresse2  =   "Le Liberté - 2ème étage - BP 5171"pole.
+  code_postal  =   83094pole.
+  ville  =   "TOULON"pole.
+  tel  =   "04.94.12.56.30"pole.
+  email  =   "secretariat.pole.mna@adsea83.org"pole.
+  description:
+   "L'Aide Éducative à Domicile se réalise dans un cadre contractuel. <br>Elle contribue à maintenir l'enfant dans sa famille en lui assurant les conditions nécessaires à son développement et à sa sécurité, tout en aidant ses parents, ou ceux qui exercent l'autorité parentale, à surmonter leurs difficultés. <br><br>Les interventions ont toujours une visée éducative. <br><br>\r\nLes mesures s'inscrivent dans une relation d'aide et de soutien en recherchant l'adhésion de la famille, même lorsque celle-ci n'adhère pas d'emblée aux actions proposées ou à la mesure mise en place. <br>Si l'intervention administrative (AED) est mise en œuvre après un accord signé entre la famille et l'inspecteur de l' Aide Sociale à ['Enfance (A.S.E.), les mesures judiciaires (AEMO) ont, quant à elles, un caractère contraint. <br>\r\nAinsi, elles s'imposent aux familles et elles introduisent l'autorité publique dans la sphère privée de la famille. \r\nA ce titre, l'intervention judiciaire donne à l'AEMO une légitimité du contrôle social effectué par cette référence à la loi. ",
+  bulle:
+   "<strong>Art. L. 112-3 (CASF)</strong><br/>\r\nLa protection de l'enfance vise à garantir la prise en compte des besoins fondamentaux de l'enfant, à soutenir son développement physique, affectif, intellectuel et social et à préserver sa santé, sa sécurité, sa moralité et son éducation, dans le respect de ses droits.",
+  principe:
+   "<h4>Les principes d'Intervention</h4><br><br>Il existe des principes communs aux deux types d'interventions   =   <ul><li>l'intérêt de l'enfant,</li><li> principe fondateur de la protection de l'enfance, </li><li>l'évaluation préalable de la situation,</li><li> l'implication de la famille dans l'accompagnement proposé,</li><li> l'élaboration du projet pour l'enfant,</li><li> le respect des droits des parents et de l'enfant,</li><li> les principes de confidentialité et de partage d'informations,</li><li> la coordination des professionnels.</li></ul>",
