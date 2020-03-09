@@ -17,8 +17,17 @@ class ServicesController < ApplicationController
   end
 
   def update
-    @service.update(service_params)
-    redirect_to pole_path(@service.pole)
+    if @service.update(service_params)
+      respond_to do |format|
+        format.html { redirect_to pole_path(@service.pole) }
+        format.js
+      end
+    else
+      respond_to do |format|
+        format.html { render pole_path(@service.pole) }
+        format.js
+      end
+    end
   end
 
   private

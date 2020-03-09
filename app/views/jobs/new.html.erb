@@ -1,5 +1,6 @@
 <%= simple_form_for @job do |f| %>
   <%= f.input :intitule %>
+  <%= f.input :n_pole_emploi %>
   <%= f.association :service, collection: Service.order(:nom), label_method: :nom, prompt: "Choissez un service" %>
   <%= f.association :site, collection: Site.order(:nom), label_method: :nom, prompt: "Précisez le site" %>
   <%= f.input :contrat %>
