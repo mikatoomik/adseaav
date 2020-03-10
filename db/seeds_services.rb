@@ -116,7 +116,6 @@ service = Service.create!(
   description: "")
 
   service = Service.create!(
-  id: 11,
   nom: "Service d'Accompagnement à la Vie Sociale",
   pole: Pole.find_by( nom: "Pôle Santé Soin Insertion"),
   mission: "",
