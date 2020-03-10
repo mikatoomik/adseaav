@@ -3,7 +3,10 @@
   align-items: flex-start;
   height: 212px;
 }
-
+.card {
+  min-width: 160px;
+  hyphens: auto;
+}
 .card_value {
   h4 {
     color: white;

@@ -1,5 +1,5 @@
 <div id="banner" class="row">
-  <div id="col-title" class="col">
+  <div id="col-title" class="col-12 col-md-6">
     <div class="title title-home">
       <h1><span class="rose">A</span>ssociation<br>
         <span class="vert">D</span>épartementale<br>
@@ -13,7 +13,7 @@
       <br>
     </div>
   </div>
-  <div id="decouvrir" class="col d-flex flex-column align-items-center justify-content-around">
+  <div id="decouvrir" class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-around">
     <%= image_tag "rosace.png" , id:"rosace" %>
     <div class="d-flex align-items-center">
       <%= link_to poles_path do %>
@@ -29,60 +29,62 @@
     <i class="fas fa-angle-double-down animated bounce infinite"></i>
   </div>
 </div>
-<div id="valeurs" class="m-3 p-3 text-center">
-  <h3>Nos Valeurs</h3>
-  <div class="cards_container d-flex flex-wrap justify-content-around">
-    <div class="card card-body card_value m-2">
-      <h4>Confiance</h4>
+<div id="partie-basse">
+  <div id="valeurs" class="row m-3 p-3 text-center">
+    <h3>Nos Valeurs</h3>
+    <div class="cards_container d-flex flex-wrap justify-content-around">
+      <div class="card card-body card_value m-2">
+        <h4>Confiance</h4>
+      </div>
+      <div class="card card-body card_value m-2 ">
+        <h4>Respect</h4>
+        <p>
+          des personnes avec lesquelles l’association est en relation en interne et en externe pour la mise en oeuvre de
+          ses missions
+        </p>
+      </div>
+      <div class="card card-body card_value m-2">
+        <h4>Ecoute</h4>
+        <p>des personnes</p>
+      </div>
+      <div class="card card-body card_value m-2">
+        <h4>Professionnalisme</h4>
+      </div>
+      <div class="card card-body card_value m-2">
+        <h4>Loyauté</h4>
+        <p>entre nous, envers les personnes, envers les institutions, envers nos engagements</p>
+      </div>
+      <div class="card card-body card_value m-2">
+        <h4>Citoyenneté</h4>
+      </div>
     </div>
-    <div class="card card-body card_value m-2 ">
-      <h4>Respect</h4>
-      <p>
-        des personnes avec lesquelles l’association est en relation en interne et en externe pour la mise en oeuvre de
-        ses missions
-      </p>
-    </div>
-    <div class="card card-body card_value m-2">
-      <h4>Ecoute</h4>
-      <p>des personnes</p>
-    </div>
-    <div class="card card-body card_value m-2">
-      <h4>Professionnalisme</h4>
-    </div>
-    <div class="card card-body card_value m-2">
-      <h4>Loyauté</h4>
-      <p>entre nous, envers les personnes, envers les institutions, envers nos engagements</p>
-    </div>
-    <div class="card card-body card_value m-2">
-      <h4>Citoyenneté</h4>
+    <div class="row w-100">
+      <h4>index d'égalité professionnelle femmes-hommes
+        : <strong>94</strong> sur 100</h4>
+      <%= link_to "Lire le détail", asset_path("indice2019.pdf"), target: '_blank' %>
     </div>
   </div>
-  <div>
-    <h4>index d'égalité professionnelle femmes-hommes
- : <strong>94</strong> sur 100</h4>
-    <%= link_to "Lire le détail", asset_path("indice2019.pdf"), target: '_blank' %>
-  </div>
-</div>
-<div id="orientations" class="m-3 p-3 text-center">
-  <h3>Nos Engagements</h3>
-  <div class="cards_container d-flex justify-content-around">
-    <div class="card card-body card_orientation m-2">
-      <h4>Orientation 1</h4>
-      <p>Une aide à la personne conduite dans le strict respect de la personne, en privilégiant l’éducatif et le
-        soutien.
-      </p>
-    </div>
-    <div class="card card-body card_orientation m-2">
-      <h4>Orientation 2</h4>
-      <p> Une prise en compte globale de la problématique des personnes accueillies, en mobilisant l’ensemble des
-        ressources et des compétences de la Sauvegarde et/ou en collaborant avec des structures extérieures.
-        C’est la notion de parcours global.</p>
-    </div>
-    <div class="card card-body card_orientation m-2">
-      <h4>Orientation 3</h4>
-      <p>Une offre de services au plus près des besoins des personnes.</p>
+  <div id="orientations" class="row m-3 p-3 text-center">
+    <h3>Nos Engagements</h3>
+    <div class="cards_container d-flex flex-wrap justify-content-around">
+      <div class="card card-body card_orientation m-2">
+        <h4>Orientation 1</h4>
+        <p>Une aide à la personne conduite dans le strict respect de la personne, en privilégiant l’éducatif et le
+          soutien.
+        </p>
+      </div>
+      <div class="card card-body card_orientation m-2">
+        <h4>Orientation 2</h4>
+        <p> Une prise en compte globale de la problématique des personnes accueillies, en mobilisant l’ensemble des
+          ressources et des compétences de la Sauvegarde et/ou en collaborant avec des structures extérieures.
+          C’est la notion de parcours global.</p>
+      </div>
+      <div class="card card-body card_orientation m-2">
+        <h4>Orientation 3</h4>
+        <p>Une offre de services au plus près des besoins des personnes.</p>
+      </div>
+
     </div>
 
   </div>
-
 </div>
