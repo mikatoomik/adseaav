@@ -199,8 +199,6 @@ site = Site.create!(
   ville: "Fréjus",
   tel: nil,
   responsable: nil,
-  created_at: Mon, 17 Feb 2020 10:04:05 UTC +00:00,
-  updated_at: Mon, 17 Feb 2020 10:17:30 UTC +00:00,
   latitude: 43.432743,
   longitude: 6.745471)
 site = Site.create!(
@@ -211,8 +209,6 @@ site = Site.create!(
   ville: "Le Luc en provence",
   tel: nil,
   responsable: nil,
-  created_at: Mon, 17 Feb 2020 10:19:57 UTC +00:00,
-  updated_at: Tue, 18 Feb 2020 10:39:16 UTC +00:00,
   latitude: 43.384245,
   longitude: 6.304222)
 site = Site.create!(
@@ -223,8 +219,6 @@ site = Site.create!(
   ville: "Draguignan",
   tel: nil,
   responsable: nil,
-  created_at: Mon, 17 Feb 2020 09:59:17 UTC +00:00,
-  updated_at: Tue, 18 Feb 2020 11:05:16 UTC +00:00,
   latitude: 43.5314724,
   longitude: 6.4768372)
 site = Site.create!(
@@ -235,8 +229,6 @@ site = Site.create!(
   ville: "Brignoles",
   tel: "04.94.59.07.40",
   responsable: nil,
-  created_at: Tue, 18 Feb 2020 11:11:52 UTC +00:00,
-  updated_at: Tue, 18 Feb 2020 11:13:50 UTC +00:00,
   latitude: 43.408205,
   longitude: 6.063209)
 site = Site.create!(
@@ -247,8 +239,6 @@ site = Site.create!(
   ville: "LA VALETTE DU VAR",
   tel: "à préciser",
   responsable: "",
-  created_at: Wed, 19 Feb 2020 13:08:08 UTC +00:00,
-  updated_at: Wed, 19 Feb 2020 13:10:37 UTC +00:00,
   latitude: 43.13741,
   longitude: 5.98314)
 site = Site.create!(
@@ -259,8 +249,6 @@ site = Site.create!(
   ville: "LA SEYNE SUR MER",
   tel: "04.94..46.14.09",
   responsable: "",
-  created_at: Wed, 19 Feb 2020 13:19:18 UTC +00:00,
-  updated_at: Wed, 19 Feb 2020 13:19:18 UTC +00:00,
   latitude: 43.111167,
   longitude: 5.879567)
 site = Site.create!(
@@ -271,8 +259,6 @@ site = Site.create!(
   ville: "LA SEYNE SUR MER",
   tel: "04.94.11.20.76",
   responsable: "",
-  created_at: Wed, 19 Feb 2020 13:21:53 UTC +00:00,
-  updated_at: Wed, 19 Feb 2020 13:21:53 UTC +00:00,
   latitude: 43.100804,
   longitude: 5.887958)
 site = Site.create!(
@@ -283,8 +269,6 @@ site = Site.create!(
   ville: "HYERES",
   tel: "04.98.16.33.16",
   responsable: "",
-  created_at: Wed, 19 Feb 2020 13:21:53 UTC +00:00,
-  updated_at: Wed, 19 Feb 2020 13:21:53 UTC +00:00,
   latitude: 43.126649,
   longitude: 6.152398)
 site = Site.create!(
@@ -295,8 +279,6 @@ site = Site.create!(
   ville: "HYERES",
   tel: "04.98.35.50.29",
   responsable: "",
-  created_at: Wed, 19 Feb 2020 13:21:53 UTC +00:00,
-  updated_at: Wed, 19 Feb 2020 13:21:53 UTC +00:00,
   latitude: 43.115904,
   longitude: 6.123735)
 site = Site.create!(
@@ -307,8 +289,6 @@ site = Site.create!(
   ville: "CUERS",
   tel: "04.94.08.00.82",
   responsable: "",
-  created_at: Wed, 19 Feb 2020 13:21:53 UTC +00:00,
-  updated_at: Wed, 19 Feb 2020 13:21:53 UTC +00:00,
   latitude: 43.23879,
   longitude: 6.076095)
 site = Site.create!(
@@ -319,8 +299,6 @@ site = Site.create!(
   ville: "OLLIOULES",
   tel: "04.83.69.15.17",
   responsable: "",
-  created_at: Wed, 19 Feb 2020 13:21:53 UTC +00:00,
-  updated_at: Wed, 19 Feb 2020 13:21:53 UTC +00:00,
   latitude: 43.112688,
   longitude: 5.857094)
 site = Site.create!(
@@ -331,8 +309,6 @@ site = Site.create!(
   ville: "TOULON CEDEX 09",
   tel: nil,
   responsable: nil,
-  created_at: Wed, 19 Feb 2020 13:29:59 UTC +00:00,
-  updated_at: Wed, 19 Feb 2020 13:34:24 UTC +00:00,
   latitude: 43.14871,
   longitude: 6.041573)
 site = Site.create!(
@@ -343,8 +319,6 @@ site = Site.create!(
   ville: "TOULON cedex",
   tel: "",
   responsable: "",
-  created_at: Wed, 19 Feb 2020 14:21:28 UTC +00:00,
-  updated_at: Wed, 19 Feb 2020 14:21:28 UTC +00:00,
   latitude: 43.124342,
   longitude: 5.929696)
 site = Site.create!(
@@ -355,8 +329,6 @@ site = Site.create!(
   ville: "SAINT MAXIMIN",
   tel: "04.94.78.14.92",
   responsable: "",
-  created_at: Wed, 19 Feb 2020 14:21:28 UTC +00:00,
-  updated_at: Wed, 19 Feb 2020 14:21:28 UTC +00:00,
   latitude: 43.454612,
   longitude: 5.848936)
 site = Site.create!(
@@ -367,8 +339,6 @@ site = Site.create!(
   ville: "COGOLIN",
   tel: "",
   responsable: "",
-  created_at: Wed, 19 Feb 2020 14:21:28 UTC +00:00,
-  updated_at: Wed, 19 Feb 2020 14:21:28 UTC +00:00,
   latitude: 43.248739,
   longitude: 6.534226
 )
