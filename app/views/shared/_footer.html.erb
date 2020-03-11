@@ -1,5 +1,5 @@
 <div class="footer">
-  <div class="col-4">
+  <div class="col-12 col-md-4">
     <div class="footer-menu-bas">
       <ul>
         <li><%= link_to "Nos Pôles", poles_path %></li>
@@ -9,20 +9,20 @@
       </ul>
     </div>
   </div>
-  <div class="col-4">
-    <div class="footer-news">
+  <div class="col-12 col-md-4">
+    <!-- <div class="footer-news">
       <h5>Newsletter</h5>
       <p>Recevez nos offres d'emploi, nos infos, nos actualités</p>
-    </div>
+    </div> -->
     <div class="footer-copyright">
-    Site réalisé par
+      Site réalisé par
       <%= link_to root_path, class: "copyright-link" do %>
-        <%= image_tag "logo_glumy.png" %>
+      <%= image_tag "logo_glumy.png" %>
       <% end %>
-    Glumy.tech
-     </div>
+      Glumy.tech
+    </div>
   </div>
-  <div class="col-4">
+  <div class="col-12 col-md-4">
     <div class="footer-links d-flex justify-content-end">
       <a href="#"><i class="fab fa-github"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>

@@ -2,8 +2,9 @@
   background:$gray;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
-  max-height: 150px;
+  min-height: 150px;
   padding: 0px 32px;
   color: rgba(0,0,0,0.3);
 }
@@ -21,9 +22,7 @@
 .footer-links a:hover {
   opacity: 1;
 }
-.footer .fa-heart {
-  color: #D23333;
-}
+
 
 .footer-menu-bas a {
   color: black;

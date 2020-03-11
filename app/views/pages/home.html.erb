@@ -23,16 +23,18 @@
     </div>
   </div>
 </div>
-<div id="separateur" class="row">
+<div id="separateur">
   <%= image_tag "rosace.png" , id:"rosace-lat" %>
   <div class="col-4 mx-auto text-center">
     <i class="fas fa-angle-double-down animated bounce infinite"></i>
   </div>
 </div>
-<div id="partie-basse">
-  <div id="valeurs" class="row m-3 p-3 text-center">
+<div id="partie-basse" class="d-flex flex-column justify-content-between">
+  <div id="valeurs" class="m-3 p-3 text-center">
     <h3>Nos Valeurs</h3>
-    <div class="cards_container d-flex flex-wrap justify-content-around">
+    <div class="cards_container d-flex flex-wrap justify-content-around" style="
+    height: auto;
+">
       <div class="card card-body card_value m-2">
         <h4>Confiance</h4>
       </div>
@@ -47,26 +49,27 @@
         <h4>Ecoute</h4>
         <p>des personnes</p>
       </div>
-      <div class="card card-body card_value m-2">
+      <div class="card card-body card_value m-2" style="flex: 1 0 auto;">
         <h4>Professionnalisme</h4>
       </div>
       <div class="card card-body card_value m-2">
         <h4>Loyauté</h4>
         <p>entre nous, envers les personnes, envers les institutions, envers nos engagements</p>
       </div>
-      <div class="card card-body card_value m-2">
+      <div class="card card-body card_value m-2" style="flex: 1 0 auto;">
         <h4>Citoyenneté</h4>
       </div>
     </div>
-    <div class="row w-100">
-      <h4>index d'égalité professionnelle femmes-hommes
-        : <strong>94</strong> sur 100</h4>
-      <%= link_to "Lire le détail", asset_path("indice2019.pdf"), target: '_blank' %>
-    </div>
   </div>
-  <div id="orientations" class="row m-3 p-3 text-center">
+  <div id="indexHF" class="m-3 p-3 text-center">
+    <h3>index d'égalité professionnelle femmes-hommes</h3>
+    <h4><strong>94</strong> sur 100</h4>
+    <%= link_to "Lire le détail", asset_path("indice2019.pdf"), target: '_blank' %>
+  </div>
+  <div id="orientations" class="m-3 p-3 text-center">
     <h3>Nos Engagements</h3>
-    <div class="cards_container d-flex flex-wrap justify-content-around">
+    <div class="cards_container d-flex flex-wrap justify-content-around align-items-stretch" style="
+    height: auto;">
       <div class="card card-body card_orientation m-2">
         <h4>Orientation 1</h4>
         <p>Une aide à la personne conduite dans le strict respect de la personne, en privilégiant l’éducatif et le
