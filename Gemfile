@@ -20,6 +20,11 @@ gem 'geocoder'
 gem 'pundit'
 gem 'cloudinary', '~> 1.12.0'
 gem 'pg_search', '~> 2.3.0'
+gem 'summernote-rails', '~> 0.8.12.0'
+gem 'jquery-rails'
+gem 'bootstrap'
+gem 'turbolinks', '~> 5.2.0'
+gem 'coffee-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

@@ -3,10 +3,10 @@
                 <%= f.input :n_pole_emploi %>
                 <%= f.input :contrat %>
                 <%= f.input :etp %>
-                <%= f.input :date_debut %>
-                <%= f.input :date_fin %>
-                <%= f.input :missions %>
-                <%= f.input :resultats %>
-                <%= f.input :conditions %>
+                <%= f.input :date_debut, html5: true   %>
+                <%= f.input :date_fin , html5: true  %>
+                <%= f.input :missions, as: :summernote %>
+                <%= f.input :resultats, as: :summernote %>
+                <%= f.input :conditions, as: :summernote %>
                 <%= f.button :submit,  "Mettre à jour"%>
               <% end %>

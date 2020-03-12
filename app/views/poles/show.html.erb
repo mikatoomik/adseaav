@@ -154,7 +154,7 @@
       </div>
       <div class="modal-body">
         <%= simple_form_for @pole do |f| %>
-        <%= f.input :description %>
+        <%= f.input :description, as: :summernote %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
@@ -178,7 +178,7 @@
       </div>
       <div class="modal-body">
         <%= simple_form_for @pole do |f| %>
-        <%= f.input :principe %>
+        <%= f.input :principe, as: :summernote %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
