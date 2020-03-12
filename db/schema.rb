@@ -47,22 +47,6 @@ ActiveRecord::Schema.define(version: 2020_03_09_174643) do
     t.index ["site_id"], name: "index_antennes_on_site_id"
   end
 
-  create_table "intitules", force: :cascade do |t|
-    t.date "date"
-    t.string "contrat"
-    t.string "etp"
-    t.string "ouvert"
-    t.bigint "service_id"
-    t.bigint "site_id"
-    t.text "missions"
-    t.text "resultats"
-    t.text "conditions"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["service_id"], name: "index_intitules_on_service_id"
-    t.index ["site_id"], name: "index_intitules_on_site_id"
-  end
-
   create_table "jobs", force: :cascade do |t|
     t.string "intitule"
     t.date "date_debut"
@@ -139,8 +123,6 @@ ActiveRecord::Schema.define(version: 2020_03_09_174643) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "antennes", "services"
   add_foreign_key "antennes", "sites"
-  add_foreign_key "intitules", "services"
-  add_foreign_key "intitules", "sites"
   add_foreign_key "jobs", "services"
   add_foreign_key "jobs", "sites"
   add_foreign_key "services", "poles"

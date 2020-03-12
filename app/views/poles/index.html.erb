@@ -4,19 +4,19 @@
       <h1>Les <span>P</span>ôles</h1>
     </div>
     <p>Notre association est organisée en Pôles opérationnels</p>
-    <div class="first-item m-3">
+    <div id="first-item" class="m-3">
       <!-- <h3>Explorez les différents pôles :</h3> -->
       <ul>
         <% @poles.each do |pole| %>
         <li>
           <% if policy(pole).show? %>
-          <%= link_to pole.nom, pole_path(pole), class: "btn btn-primary arondi hvr-pulse m-2"  %>
+          <%= link_to pole.nom, pole_path(pole), class: "btn btn-primary btn-block arondi hvr-pulse m-2"  %>
           <% end %>
         </li>
         <% end %>
       </ul>
     </div>
-    <div class="second-item m-3">
+    <div id="second-item" class="m-3">
       <h3>L'histoire</h3>
       <p class="text-justify mx-3">L'Association Départementale de SAuvegarde de l'Enfance, de l'Adolescence et des
         Adultes en
@@ -28,7 +28,7 @@
 
 
   </div>
-  <div class="col-12 col-md-6 text-center">
+  <div id="col-centrale" class="col-12 col-md-6 text-center">
     <div id="rosace_poles">
       <%= image_tag "rosace.png" %>
       <span class="text-secondary">survolez la rosace</span>
@@ -82,19 +82,19 @@
         </div>
       </div>
       <% end %>
-      <div id="mots" class="d-flex flex-row justify-content-center mt-5">
-        <div class="third-item m3">
-          <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary arondi m-2 hvr-wobble-vertical" data-toggle="modal"
-            data-target="#ModalPresident">
-            Mot de Pierre Crapanzano<br>Président
-          </button>
-          <!-- Button trigger modal -->
-          <button type="button" class="btn btn-secondary arondi px-4 m-2 hvr-wobble-vertical" data-toggle="modal"
-            data-target="#ModalDirecteur">
-            Mot de Laurent Savoye<br>Directeur Général
-          </button>
-        </div>
+    </div>
+    <div id="mots" class="d-flex flex-row justify-content-center mt-5">
+      <div class="third-item m3">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary arondi m-2 hvr-wobble-vertical" data-toggle="modal"
+          data-target="#ModalPresident">
+          Mot de Pierre Crapanzano<br>Président
+        </button>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-secondary arondi px-4 m-2 hvr-wobble-vertical" data-toggle="modal"
+          data-target="#ModalDirecteur">
+          Mot de Laurent Savoye<br>Directeur Général
+        </button>
       </div>
     </div>
   </div>

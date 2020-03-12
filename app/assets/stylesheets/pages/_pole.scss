@@ -11,6 +11,7 @@
   padding-right: 1%;
   ul {
     list-style: none;
+    padding: 0;
   }
 
 }
@@ -44,8 +45,13 @@ color: white;
 .mo {
   background-color: $turquoise;
   h1 {
-    margin-left: -75px;
-    margin-right: 100px;
+      margin-left: 25px;
+      margin-right: 50px;
+    @media (min-width: 823px) {
+      margin-left: -175px;
+      margin-right: 100px;
+    }
+
   }
   header > div {
     flex-direction: row-reverse !important;
@@ -76,12 +82,12 @@ color: white;
      p {
       color: white;
     }
-    div > div:nth-child(14) {
+    div > div:nth-child(13) {
       padding: 24px 0px 0px 16px;
       h5 {
         color: $turquoise;
       }
-      border-radius:3% 20% 17% 21%;
+      border-radius:15% 16% 34% 9%;
       background-color: white;
       color: $blue;
     }
@@ -237,6 +243,9 @@ color: white;
 
   ul {
     list-style: url('jaune_bullet.png');
+  }
+  h1 {
+    hyphens: auto;
   }
 
   h4 {

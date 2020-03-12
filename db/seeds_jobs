@@ -1,0 +1,22 @@
+Job.create!(
+  intitule:"REFERENT EDUCATIF (H/F)",
+  n_pole_emploi: "099QXPS",
+  contrat:"CDI",
+  date_debut:"",
+  date_fin:"",
+  etp:"35H Horaires normaux",
+  ouvert:"",
+  service:"",
+  site:"",
+  missions:"Les missions confiées au référent éducatif du service AEMO FAMILIALE sont de :<ul>
+<li>Aider à instaurer, restaurer ou préserver l'adaptation sociale et l'autonomie des enfants, adolescents ou adultes en difficulté, handicapés ou en situation de dépendance</li>
+<li>Élaborer et étayer le recueil d'information permettant l'aide à la prise de décision</li>
+<li>Développer les compétences parentales  </li>
+<li>Travailler en partenariat avec les dispositifs de droits communs</li>
+<li>Rendre compte de son intervention (au Magistrat, à l'Inspecteur enfance, au Chef de service)</li></ul>",
+  resultats:"<ul><li>Respect des procédures </li>
+<li>Respect des délais imposés</li>
+<li>Strict respect de la confidentialité</li>
+<li>Investigation</li></ul>",
+  conditions:""
+)

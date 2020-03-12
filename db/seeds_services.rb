@@ -1,4 +1,4 @@
-service = Service.create!(
+Service.create!(
   nom: "Placement Familial Spécialisé",
   pole: Pole.find_by(nom: "Pôle Hébergement"),
   mission:
@@ -9,7 +9,7 @@ service = Service.create!(
    "<h4>Définition et cadre de référence</h4>\r\n\r\nLe P.F.S. est chargé d’accueillir et de prendre en charge de manière individualisée, au domicile d’assistants familiaux agréés par le Conseil départemental, des enfants et des jeunes majeurs, qui ne peuvent demeurer dans leur propre famille. Le P.F.S. s’adresse à des enfants de 0 à 18 ans et à des jeunes majeurs de 18 à 21 ans. \r\n",
   resume: "test2\r\n")
 
-service = Service.create!(
+Service.create!(
   nom: "AEMO SPECIAL JEUNES",
   pole: Pole.find_by( nom: "Pôle Milieu Ouvert"),
   mission:
@@ -19,7 +19,7 @@ service = Service.create!(
   description: "<h4>Les missions et objectifs du service AEMO Spécial Jeunes</h4>",
   resume: "L'aemo special jeunes")
 
-  service = Service.create!(
+Service.create!(
   nom: "Médiation Familiale",
   pole: Pole.find_by( nom: "Pôle Milieu Ouvert"),
   mission: nil,
@@ -28,7 +28,7 @@ Après accord des parties, des séances de médiation sont programmées – une 
 Le nombre de séances est variable et modulable.",
   description: "«La médiation familiale est un processus de construction ou de reconstruction du lien familial axé sur l’autonomie et la responsabilité des personnes concernées par des situations de rupture ou de séparation dans lequel un tiers impartial, indépendant, qualifié et sans pouvoir de décision – le médiateur familial – favorise à travers l’organisation d’entretiens confidentiels leur communication, la gestion de leur conflit dans le domaine familial (…) » (FENAMEF).<br>La médiation familiale est un temps d’écoute, d’échanges, d’identification des problèmes et de négociation. Il s’agit de rechercher une solution durable et librement consentie par les parties. Un protocole d’accord peut être établi. <br>La médiation familiale s’adresse aux couples, aux parents en situation de séparation ou de divorce, aux jeunes adultes en rupture de liens avec leurs familles, aux grands-parents qui souhaitent garder des liens avec leurs petits-enfants, aux fratries, ...")
 
-  service = Service.create!(
+Service.create!(
   nom: "Espace Rencontre",
   pole: Pole.find_by( nom: "Pôle Milieu Ouvert"),
   mission: nil,
@@ -48,7 +48,7 @@ L’Espace Rencontre permet l’accès au droit de visite des parents. L’actio
 
 L’Espace Rencontre vise à protéger, sécuriser et soutenir l’enfant lors de ces contacts avec son parent. La visite peut aussi dans certains cas concerner des rencontres de la fratrie.")
 
-service = Service.create!(
+Service.create!(
   nom: "Service d'Evaluation et Mise à l'Abri",
   pole: Pole.find_by( nom: "Pôle Mineurs Non Accompagnés (MNA)"),
   mission:
@@ -58,7 +58,7 @@ service = Service.create!(
   description:
    "Le dispositif national de mise à l’abri, d’évaluation et d’orientation des MNA prévu par l’article R221-11 du CASF prévoit une première phase administrative : lorsque le jeune se présentant ou identifié comme MNA sollicite une protection, il fait l’objet d’un premier entretien d’accueil par les services du Conseil Départemental. Si ce dernier confirme, le jeune est mis à l’abri. Dans le Var, l’ADSEAAV met à l’abri les jeunes sur un site dédié sur la commune de Toulon « Aux Trois Mûriers ».")
 
-  service = Service.create!(
+Service.create!(
   nom: "Service d'Accompagnement en Appartement Diffus",
   pole: Pole.find_by( nom: "Pôle Mineurs Non Accompagnés (MNA)"),
   mission:
@@ -69,7 +69,7 @@ service = Service.create!(
    "Conditions d’éligibilité :\r\n<ul>\r\n<li>\tEtre au moins âgé de 16 ans </li>\r\n<li>\tDisposer d’un Jugement en Assistance Educative </li>\r\n<li>\tEtre autonome dans les gestes de la vie courante </li>\r\n<li>\tAvoir obtenu un avis favorable à l’intégration en appartement diffus de la part de l’Inspecteur ASE </li>\r\n</ul>"
    )
 
-  service = Service.create!(
+Service.create!(
   nom: "Service Ressources Humaines",
   pole: Pole.find_by( nom: "Pôle ressources"),
   mission:
@@ -77,7 +77,7 @@ service = Service.create!(
   modalités: "",
   description: "")
 
-  service = Service.create!(
+Service.create!(
   nom: "Service d'Accompagnement Hotel",
   pole: Pole.find_by( nom: "Pôle Mineurs Non Accompagnés (MNA)"),
   mission:
@@ -88,7 +88,7 @@ service = Service.create!(
    "Le jeune dispose d’une OPP et est soit en attente d’une place en accueil collectif soit en attente d’une place en appartement diffus.\r\nAlors, il est hébergé en hôtel (Aire Toulonnaise ou Brignoles). Un éducateur référent est nommé et le chef de service organise le premier entretien afin d’expliquer au jeune le déroulé de sa prise en charge au sein de ce service. "
   )
 
-service = Service.create!(
+Service.create!(
   nom: "Centre Médico Psycho Pédagogique",
   pole: Pole.find_by( nom: "Pôle Santé Soin Insertion"),
   mission: "",
@@ -96,7 +96,7 @@ service = Service.create!(
   description:
    "En référence à l’Annexe XXXII qui régit les CMPP, le CMPP de l’ADSEAAV se situe au carrefour du médical, du psychologique, du social et du pédagogique. Il accueille des enfants et des adolescents, de 0 à 20 ans, présentant des troubles et pathologies variés (troubles psychologiques, du comportement, du caractère, difficultés relationnelles, scolaires, troubles psycho fonctionnels et somatiques, problèmes de maltraitance, d’abus sexuels, etc.) \r\nLes consultations sont effectuées en cure ambulatoire par une équipe pluridisciplinaire de cliniciens sous la responsabilité du Directeur médical, qui en co-direction, avec la Direction de pôle, participe à l’organisation et fonctionnement du CMPP.\r\nLa démarche de consultation est à l’initiative de la famille et/ou de l’adolescent, elle peut également être induite par un tiers. Notre offre de soins est organisée sur trois territoires : La Valette du Var,      Hyères et Cuers.\r\n",
   resume: nil)
-  service = Service.create!(
+Service.create!(
   nom: "Réseau Chambres en ville",
   pole: Pole.find_by(nom: "Pôle Hébergement"),
   mission:
@@ -107,7 +107,7 @@ service = Service.create!(
    "<h4>Définition et cadre de référence</h4>\r\n\r\nLe R.C.V s’adresse à des adolescents de 16 à 21 ans présentant des difficultés spécifiques résultant de l’existence de relations complexes au sein de leur famille, pour lesquels un travail autour de l’autonomie au quotidien est nécessaire. Les jeunes sont hébergés dans des logements loués par l’Association et situés au cœur de la cité et bénéficient d’un accompagnement éducatif individualisé. Les jeunes sont accueillis sur décision d’un Juge des Enfants dans le cadre d’une décision de placement direct ou bien sur décision d’un Inspecteur de l’Aide Sociale à l’Enfance (accueil provisoire, Contrat Jeune Majeur, suite à une ordonnance de placement provisoire).\r\nLe cadre de référence du service est celui de la Protection de l’Enfance. Son action est guidée par le principe de l’intérêt supérieur de l’enfant.\r\n"
   )
 
-  service = Service.create!(
+Service.create!(
   nom: "Service Comptabilité, Finances, Logistique et Patrimoine",
   pole: Pole.find_by( nom:"Pôle ressources"),
   mission:
@@ -115,7 +115,7 @@ service = Service.create!(
   modalités: "",
   description: "")
 
-  service = Service.create!(
+Service.create!(
   nom: "Service d'Accompagnement à la Vie Sociale",
   pole: Pole.find_by( nom: "Pôle Santé Soin Insertion"),
   mission: "",
@@ -124,7 +124,7 @@ service = Service.create!(
    "Le SAVS a été créé en 2002 en complémentarité de l'ESAT « Hors les Murs ». Depuis 2012, ce dispositif est devenu un service à part entière proposant une capacité d’accueil de 15 places en suivi régulier et 1 place en séquentiel soit une file active de 10 personnes. \r\n\r\nIl s'adresse à toute personne adulte en situation de handicap, quel que soit le type de ce handicap sous réserve d'une orientation SAVS de la Maison Départementale des Personnes Handicapées du Var (MDPH).\r\nIl s’agit d’un service de proximité proposé sur l’ensemble du département du VAR à des personnes en situation de handicap afin de leur permettre de concourir à une insertion sociale et professionnelle dans le cadre d’un accompagnement personnalisé. Ce service propose un accompagnement adapté, dont l'objectif est le maintien ou la restauration des liens familiaux, sociaux, scolaires ou professionnels. Il a donc été créé pour favoriser un apprentissage vers l'autonomie des actes quotidiens et l'accomplissement des activités de la vie domestiques et sociale.\r\n"
   )
 
-  service = Service.create!(
+Service.create!(
   nom: "Appartement de Coordination Thérapeutique",
   pole: Pole.find_by( nom: "Pôle Santé Soin Insertion"),
   mission: "",
@@ -133,7 +133,7 @@ service = Service.create!(
    "Les ACT proposent un hébergement « à titre temporaire pour des personnes en situation de fragilité psychologique et sociale et nécessitant des soins et un suivi médical, de manière à assurer le suivi et la coordination des soins, l’observance des traitements et à permettre un accompagnement psychologique et une aide à l’insertion ». (Extrait du décret 2002-1227, du 3 octobre 2002). \r\nNotre offre d’hébergement repose sur un parc locatif de 21 logements individuels et en diffus répartis sur quatre territoires : Hyères 5 logements, Brignoles 4 logements, Draguignan 8 logements, Fréjus/Saint Raphael 4 logements. \r\nNotre dispositif permet d’héberger des personnes majeures (personnes isolées, des couples ou des familles) en situation de précarité atteintes par une pathologie chronique invalidante. L’accompagnement médico-social proposé par une équipe pluridisciplinaire, se caractérise par une coordination médicale, psychosociale et éducative. \r\n"
   )
 
-  service = Service.create!(
+Service.create!(
   nom: "Lits Halte Soin Santé",
   pole: Pole.find_by( nom: "Pôle Santé Soin Insertion"),
   mission: "",
@@ -142,7 +142,7 @@ service = Service.create!(
    "Les LHSS proposent un hébergement temporaire accompagné d’une prise en charge médicale adaptée, à des personnes sans domicile fixe, atteintes de problèmes de santé bénins ou de pathologies aigües, mais ne nécessitant pas une hospitalisation, pour leur permettre une continuité de soins, un temps de repos et éviter des complications de santé, le renoncement aux soins.\r\nEn partenariat avec l’association Comité Commun, nous proposons 5 places en semi-collectif sur le territoire de Draguignan. L’accompagnement médico-social proposé par une équipe pluridisciplinaire, se caractérise une intervention en continue sur le dispositif et vise la coordination du champ médical, social et éducatif.\r\n"
   )
 
-  service = Service.create!(
+Service.create!(
   nom: "Accompagnement Social Lié au Logement",
   pole: Pole.find_by( nom: "Pôle Santé Soin Insertion"),
   mission: "",
@@ -151,7 +151,7 @@ service = Service.create!(
    "L'accompagnement social lié au logement a pour objectif \" d'aider toute personne ou famille éprouvant des difficultés particulières en raison notamment de l’inadaptation de ses ressources ou de ses conditions d'existence, pour accéder à un logement décent et indépendant ou de s'y maintenir\". \r\nL’ADSEAAV met en œuvre ce projet, financé et renouvelé chaque année par le Conseil Départemental sur les territoires de Draguignan et de Fayence pour une file active de 35 personnes. \r\n"
   )
 
-  service = Service.create!(
+Service.create!(
   nom: "Service d'Investigation Educative",
   pole: Pole.find_by( nom: "Pôle Milieu Ouvert"),
   mission:
@@ -162,7 +162,7 @@ service = Service.create!(
    "<h4>L'équipe pluridisciplinaire</h4>\r\nL'équipe du SIE est composée d'une directrice, de deux chefs de service, de travailleurs sociaux (éducateurs spécialisés et assistants de service social), de psychologues, d'un médecin psychiatre, de secrétaires."
   )
 
-  service = Service.create!(
+Service.create!(
   nom: "Accompagnement au Droit Lié à l'Habitat",
   pole: Pole.find_by( nom: "Pôle Santé Soin Insertion"),
   mission: "",
@@ -171,7 +171,7 @@ service = Service.create!(
    "La permanence ADLH permet d’accompagner les familles dans leurs démarches administratives et juridiques, amiables ou contentieuses afin de faire valoir leurs droits dans le cadre du contentieux DALO, des expulsions domiciliaires et de l’habitat indigne.\r\nFinancée et renouvelée par la Fondation Abbé Pierre, cette action est proposée sur le territoire de Fréjus depuis 2012.\r\n"
   )
 
-  service = Service.create!(
+Service.create!(
   nom: "Etablissement et Service d'Aide par le Travail",
   pole: Pole.find_by( nom: "Pôle Santé Soin Insertion"),
   mission: "",
@@ -180,7 +180,7 @@ service = Service.create!(
    "L'ESAT « Hors les Murs » de l'A.D.S.E.A. 83 est un concept innovant, créé en 2000, se distinguant des\r\nESAT dits « classiques » par son accompagnement d'insertion professionnelle orienté exclusivement vers le milieu ouvert et individualisé en faveur des personnes adultes bénéficiant d’une reconnaissance par la Maison Départementale des Personnes Handicapées du Var (MDPH) de statut travailleur en situation de handicap.\r\n\r\nL’ESAT « Hors les Murs » s’inscrit dans une articulation du milieu protégé et ordinaire. Notre mission se décline par la mise en œuvre d’une dynamique d’insertion socio-professionnelle en milieu ordinaire dans une logique de parcours personnalisé, et soutenue par un accompagnement médico-social. Elle vise la promotion de l’emploi en milieu ordinaire par le biais de mises à dispositions individuelles au sein d’entreprises privées, de collectivités territoriales, ou toute autre personne morale ou personne physique. Notre capacité d’accueil est de 39 places sur l’ensemble du département.\r\n\r\nL’équipe est pluridisciplinaire et représentée par des fonctions chargés d’insertion professionnelle, une assistante sociale, une psychologue, un médecin, une secrétaire et une Chef de service.\r\n"
   )
 
-  service = Service.create!(
+Service.create!(
   nom: "AEMO FAMILIALE",
   pole: Pole.find_by( nom: "Pôle Milieu Ouvert"),
   mission:

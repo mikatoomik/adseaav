@@ -34,7 +34,7 @@
     </div>
   </header>
   <div id="pill" class="row  bg-light my-3">
-    <div class="col p-5">
+    <div class="col-12 col-md-6 p-5">
       <p class="ml-5 pt-5 pb-3 pl-2 text-justify">
         <!-- Button trigger modal -->
         <% if policy(@pole).edit? %>
@@ -45,7 +45,7 @@
         <%= raw( @pole.description ) %>
       </p>
     </div>
-    <div class="col p-5">
+    <div class="col-12  col-md-6 p-5">
       <!-- Button trigger modal -->
       <% if policy(@pole).edit? %>
       <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#principeModal">
@@ -59,7 +59,7 @@
   </div>
   <div class="row service text-justify">
     <div class="col mx-5 px-5">
-      <% @pole.services.sort.each do |service| %>
+      <% @pole.services.sort_by(&:nom).each do |service| %>
       <h3 class="text-uppercase"><%= service.nom %></h3>
       <% if policy(@pole).edit? %>
       <%= link_to edit_pole_service_path(@pole, service) do %>
@@ -67,11 +67,11 @@
       <% end %>
       <% end %>
       <%= raw(service.description) %>
-      <div class="row mission">
-        <div class="col-6">
+      <div class="row mission mt-3">
+        <div class="col-12 col-md-6">
           <%= raw(service.mission) %>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <%= raw(service.modalités) %>
         </div>
       </div>
