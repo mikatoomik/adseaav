@@ -1,12 +1,17 @@
-<%= simple_form_for @job do |f| %>
-                <%= f.input :intitule %>
-                <%= f.input :n_pole_emploi %>
-                <%= f.input :contrat %>
-                <%= f.input :etp %>
-                <%= f.input :date_debut, html5: true   %>
-                <%= f.input :date_fin , html5: true  %>
-                <%= f.input :missions, as: :summernote %>
-                <%= f.input :resultats, as: :summernote %>
-                <%= f.input :conditions, as: :summernote %>
-                <%= f.button :submit,  "Mettre à jour"%>
-              <% end %>
+<div class="col-12 col-md-6 mx-auto">
+  <div class="jumbotron">
+    <h3>Modifier l'offre d'emploi</h3>
+    <%= simple_form_for @job do |f| %>
+      <%= f.input :intitule %>
+      <%= f.input :n_pole_emploi %>
+      <%= f.input :contrat %>
+      <%= f.input :etp %>
+      <%= f.input :date_debut, html5: true  %>
+      <%= f.input :date_fin , html5: true  %>
+      <%= f.input :missions, as: :summernote %>
+      <%= f.input :resultats, as: :summernote %>
+      <%= f.input :conditions, as: :summernote %>
+      <%= f.button :submit,  "Mettre à jour", class:"btn btn-success"%>
+    <% end %>
+  </div>
+</div>

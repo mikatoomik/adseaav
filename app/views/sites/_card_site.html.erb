@@ -1,7 +1,12 @@
 <% @sites.each do |site| %>
-<div class="card mx-1 mb-3 " style="width: 18rem;">
+<div class="card mx-1 mb-3 " style="width: 22rem;">
   <div class="card-header">
     <h5 class="card-title">
+      <% if policy(site).edit? %>
+        <%= link_to edit_site_path(site) do %>
+        <i class="fas fa-pencil-alt"></i>
+        <% end %>
+      <% end %>
     <%= site.nom %></h5>
     <%= cl_image_tag site.photo.key, class: "card-img-top mb-1" if site.photo.attached? %>
   </div>

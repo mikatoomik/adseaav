@@ -1,0 +1,10 @@
+<%= simple_form_for @site do |f| %>
+  <%= f.input :nom %>
+  <%= f.input :adresse %>
+  <%= f.input :adresse2 %>
+  <%= f.input :code_postal %>
+  <%= f.input :ville %>
+  <%= f.input :tel %>
+  <%= f.input :responsable %>
+  <%= f.button :submit , class:"btn btn-success" %>
+<% end %>

@@ -1,8 +1,12 @@
-<%= simple_form_for([@pole, @service]) do |f| %>
-  <%= f.input :nom %>
-  <%= f.input :description, as: :summernote %>
-  <%= f.input :mission, as: :summernote %>
-  <%= f.input :modalités, as: :summernote %>
-  <%= f.button :submit %>
-<% end %>
-
+<div class="col-12 col-md-6 mx-auto">
+  <div class="jumbotron">
+    <h3>Modifier le service</h3>
+    <%= simple_form_for([@pole, @service]) do |f| %>
+      <%= f.input :nom %>
+      <%= f.input :description, as: :summernote %>
+      <%= f.input :mission, as: :summernote %>
+      <%= f.input :modalités, as: :summernote %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>

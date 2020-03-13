@@ -15,4 +15,13 @@ class SitePolicy < ApplicationPolicy
       false
     end
   end
+
+  def create?
+    if user
+      user.admin
+    else
+      false
+    end
+  end
+
 end

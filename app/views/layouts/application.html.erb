@@ -23,13 +23,13 @@
   <meta name="twitter:description"
     content="Association Départementale de Sauvegarde de l'Enfance, de l'Adolescence et des Adultes en difficulté du Var">
   <meta name="twitter:creator" content="@">
-  <meta name="twitter:image:src" content=<%= image_tag "twitter-card.jpg"%>>
 
   <%= csrf_meta_tags %>
   <%= action_cable_meta_tag %>
   <%= favicon_link_tag asset_path('favicon.ico') %>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= stylesheet_pack_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
 </head>
 
 <body>
@@ -39,7 +39,7 @@
     <%= yield %>
   </div>
   <%= render 'shared/footer' %>
-  <%= javascript_include_tag 'application' %>
+
   <%= javascript_pack_tag 'application' %>
 </body>
 
