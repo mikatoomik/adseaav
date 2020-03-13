@@ -4,13 +4,26 @@ class AntennePolicy < ApplicationPolicy
       scope.all
     end
   end
-  def show?
-    true # Anyone can view a pole
+
+  def create?
+    if user
+      user.admin
+    else
+      false
+    end
   end
 
   def update?
     if user
       user.admin
+    else
+      false
+    end
+  end
+
+  def destroy?
+    if user
+      user.admin || user.rh
     else
       false
     end

@@ -48,9 +48,24 @@
       </p>
     </div>
     <div class="card-footer text-muted">
+    <% if policy(service).edit? %>
+      <%= link_to new_service_antenne_path(service) do %>
+      <i class="fas fa-plus-circle"></i>
+      <% end %>
+    <% end %>
       <ul>
         <% service.antennes.each do |antenne| %>
-        <li><%= antenne.nom %></li>
+        <li>
+        <% if policy(service).edit? %>
+          <%= link_to edit_service_antenne_path(service, antenne) do %>
+            <i class="fas fa-pencil-alt"></i>
+          <% end %>
+          <%= link_to service_antenne_path(service, antenne), data: { confirm: "Are you sure?" }, method:'DELETE' do %>
+            <i class="fas fa-trash-alt"></i>
+            <% end %>
+        <% end %>
+        <%= antenne.nom %>(chef de service : <%= antenne.cds %>)
+        </li>
         <% end %>
       </ul>
     </div>

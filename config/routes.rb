@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :poles do
     resources :services
-    resources :antennes
   end
   resources :sites
   resources :jobs
-  resources :services
+  resources :services do
+    resources :antennes
+  end
 end

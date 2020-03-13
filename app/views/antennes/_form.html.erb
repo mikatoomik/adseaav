@@ -1,0 +1,6 @@
+<%= simple_form_for [@service, @antenne] do |f| %>
+  <%= f.input :nom %>
+  <%= f.association :site, collection: Site.order(:nom), label_method: :nom, prompt: "Précisez le site" %>
+  <%= f.input :cds %>
+  <%= f.button :submit , class:"btn btn-success" %>
+<% end %>

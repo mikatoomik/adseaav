@@ -75,6 +75,11 @@
           <%= raw(service.modalités) %>
         </div>
       </div>
+      <div>
+        Vous trouverez ce service dans les villes suivantes :
+        <% villes = service.antennes.map {|antenne|  antenne.site.ville.downcase.capitalize.split(/cedex/)} %>
+        <%= villes.uniq.join(", ") %>
+      </div>
       <div class="separateur w-100 my-2">
         <br><br>
       </div>
