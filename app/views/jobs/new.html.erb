@@ -9,7 +9,7 @@
       <%= f.input :contrat, collection: ['CDI', 'CDD', 'stage', 'alternance', 'VIE', 'job étudiant', 'job saisonnier'] %>
       <%= f.input :etp %>
       <%= f.input :date_debut, html5: true  %>
-      <%= f.input :date_fin, html5: true  if :contrat != "CDI" %>
+      <%= f.input :date_fin, html5: true %>
       <%= f.input :missions , as: :summernote %>
       <%= f.input :resultats, as: :summernote  %>
       <%= f.input :conditions, as: :summernote  %>

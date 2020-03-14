@@ -4,7 +4,7 @@
     <%= simple_form_for @job do |f| %>
       <%= f.input :intitule %>
       <%= f.input :n_pole_emploi %>
-      <%= f.input :contrat %>
+      <%= f.input :contrat, collection: ['CDI', 'CDD', 'stage', 'alternance', 'VIE', 'job étudiant', 'job saisonnier'] %>
       <%= f.input :etp %>
       <%= f.input :date_debut, html5: true  %>
       <%= f.input :date_fin , html5: true  %>

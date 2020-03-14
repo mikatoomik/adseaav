@@ -27,18 +27,17 @@
           <%= link_to job_path(@job), method:'DELETE' do %>
           <i class="fas fa-trash-alt"></i>
           <% end %>
-          <% end %><h5 class="card-title ">
+            <%= link_to edit_job_path(@job) do %>
+            <i class="fas fa-pencil-alt"></i>
+            <% end %>
+            <% end %>
+          <h5 class="card-title ">
             <%= @job.intitule %></h5>
           <p>Offre n° <%= @job.n_pole_emploi %></p>
         </div>
         <div class="card-body d-flex flex-column justify-content-between">
           <h6 class="card-subtitle text-muted text-center"><%= @job.service.pole.nom %><br><%= @job.service.nom %></h6>
           <p class="card-text">
-            <% if policy(@job).edit? %>
-            <%= link_to edit_job_path(@job) do %>
-            <i class="fas fa-pencil-alt"></i>
-            <% end %>
-            <% end %>
             <strong><%= @job.contrat %></strong><br>
             <%= @job.etp %><br>
             Prise de poste : le <%= l(@job.date_debut, format: :long, locale: :'fr') %><br>
