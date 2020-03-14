@@ -1,0 +1,18 @@
+<div class="col-12 col-md-6 mx-auto">
+  <div class="jumbotron">
+    <h3>Postuler pour l'offre d'emploi</h3>
+    <div class="form-group">
+    <%= form_tag(mail_postule_job_path, :method => "post", :multipart => true ) do %>
+      <%= text_field_tag :nom, params[:nom], class:"form-control", placeholder: "Votre nom" %>
+      <%= text_field_tag :email, params[:email], class:"form-control", placeholder: "Votre email" %>
+      <br>
+      <%= label_tag 'file_cv', 'Ajouter votre cv' %>
+      <%= file_field_tag 'file_cv', :accept => 'pdf', class:"form-control-file" %>
+      <br>
+      <%= label_tag 'file_motiv', 'Ajouter votre lettre de motivation' %>
+      <%= file_field_tag 'file_motiv', :accept => 'pdf', class:"form-control-file" %>
+      <%= submit_tag "Postuler", :name => nil, class:"btn btn-primary btn-block my-2" %>
+    <% end %>
+    </div>
+  </div>
+</div>

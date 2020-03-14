@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
-  before_action :set_job, only: %i[show edit update destroy]
+  before_action :set_job, only: %i[show edit update postule mail_postule destroy]
   def index
     if params[:query].present?
       @jobs = policy_scope(Job.search_in_jobs("%#{params[:query]}%"))
@@ -10,6 +10,27 @@ class JobsController < ApplicationController
   end
 
   def show
+  end
+
+  def postule
+  end
+
+  def mail_postule
+    @nom = params[:nom]
+    @email = params[:email]
+    uploaded_io = params[:file_cv]
+    File.open(Rails.root.join('tmp', 'storage', uploaded_io.original_filename), 'wb') do |file|
+      file.write(uploaded_io.read)
+    end
+    @file_cv = Rails.root.join('tmp', 'storage', uploaded_io.original_filename)
+    uploaded_io = params[:file_motiv]
+    File.open(Rails.root.join('tmp', 'storage', uploaded_io.original_filename), 'wb') do |file|
+      file.write(uploaded_io.read)
+    end
+    @file_motiv = Rails.root.join('tmp', 'storage', uploaded_io.original_filename)
+    mail = JobMailer.with(job: @job, nom: @nom, email: @email, file_cv: @file_cv, file_motiv: @file_motiv).postule
+    mail.deliver_now
+    redirect_to jobs_path
   end
 
   def edit

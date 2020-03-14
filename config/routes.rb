@@ -5,7 +5,12 @@ Rails.application.routes.draw do
     resources :services
   end
   resources :sites
-  resources :jobs
+  resources :jobs do
+    member do                             # member => job id in URL
+      get 'postule'                          # JobsController#postule
+      post 'mail_postule'
+    end
+  end
   resources :services do
     resources :antennes
   end

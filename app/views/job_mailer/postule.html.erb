@@ -1,0 +1,35 @@
+ <table align="center" border="0" cellpadding="0" cellspacing="1" width="700" style="border-collapse: collapse;">
+ <tr>
+  <td align="center" bgcolor="#30708E" style="padding: 40px 0 30px 0;">
+  <h1>Candidature </h1><br>
+  <h2>Offre N°<%= @job.n_pole_emploi %></h2>
+  </td>
+ </tr>
+ <tr>
+  <td bgcolor="#f9fafc" style="padding: 20px 10px 15px 10px;">
+<p>
+  <%= @greeting %>,<br>
+  Je m'appelle <%= @nom %> et je souhaite postuler pour l'offre suivante :<br>
+  <%= @job.intitule %>, sur le pôle <%= @job.service.pole.nom %><br>
+  Offre N°<%= @job.n_pole_emploi %><br>
+  en <strong><%= @job.contrat %></strong><br>
+  de <%= @job.etp %><br>
+  pour une prise de poste : le <%= l(@job.date_debut, format: :long, locale: :'fr') %><br>
+            <%= "Date de fin : #{l(@job.date_fin, format: :long, locale: :'fr')}" if @job.contrat != "CDI" %><br>
+</p>
+  </td>
+ </tr>
+ <tr>
+  <td bgcolor="#f9fafc" style="padding: 20px 10px 15px 10px;">
+<p>
+Merci de prendre en considération ma demande.
+<br>
+Cordialement.
+<br>
+<%= @nom %>
+</p>
+  </td>
+ </tr>
+
+</table>
+
