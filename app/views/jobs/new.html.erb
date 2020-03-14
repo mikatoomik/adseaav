@@ -6,7 +6,7 @@
       <%= f.input :n_pole_emploi %>
       <%= f.association :service, collection: Service.order(:nom), label_method: :nom, prompt: "Choissez un service" %>
       <%= f.association :site, collection: Site.order(:nom), label_method: :nom, prompt: "Précisez le site" %>
-      <%= f.input :contrat %>
+      <%= f.input :contrat, collection: ['CDI', 'CDD', 'stage', 'alternance', 'VIE', 'job étudiant', 'job saisonnier'] %>
       <%= f.input :etp %>
       <%= f.input :date_debut, html5: true  %>
       <%= f.input :date_fin, html5: true  if :contrat != "CDI" %>
