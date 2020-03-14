@@ -19,15 +19,19 @@ class JobsController < ApplicationController
     @nom = params[:nom]
     @email = params[:email]
     uploaded_io = params[:file_cv]
-    File.open(Rails.root.join('tmp', 'storage', uploaded_io.original_filename), 'wb') do |file|
-      file.write(uploaded_io.read)
+    unless uploaded_io.nil?
+      File.open(Rails.root.join('tmp', 'storage', uploaded_io.original_filename), 'wb') do |file|
+        file.write(uploaded_io.read)
+      end
+      @file_cv = Rails.root.join('tmp', 'storage', uploaded_io.original_filename)
     end
-    @file_cv = Rails.root.join('tmp', 'storage', uploaded_io.original_filename)
     uploaded_io = params[:file_motiv]
-    File.open(Rails.root.join('tmp', 'storage', uploaded_io.original_filename), 'wb') do |file|
-      file.write(uploaded_io.read)
+    unless uploaded_io.nil?
+      File.open(Rails.root.join('tmp', 'storage', uploaded_io.original_filename), 'wb') do |file|
+        file.write(uploaded_io.read)
+      end
+      @file_motiv = Rails.root.join('tmp', 'storage', uploaded_io.original_filename)
     end
-    @file_motiv = Rails.root.join('tmp', 'storage', uploaded_io.original_filename)
     mail = JobMailer.with(job: @job, nom: @nom, email: @email, file_cv: @file_cv, file_motiv: @file_motiv).postule
     mail.deliver_now
     redirect_to jobs_path
