@@ -1,3 +1,15 @@
-Job#postule
+Candidature
 
-<%= @greeting %>, find me in app/views/job_mailer/postule.text.erb
+<%= @greeting %>, Je m'appelle <%= @nom %> et je souhaite postuler pour l'offre suivante :
+  <%= @job.intitule %>, sur le pôle <%= @job.service.pole.nom %>.
+  Offre N°<%= @job.n_pole_emploi %>.
+  en <strong><%= @job.contrat %></strong>,
+  de <%= @job.etp %>.
+  Pour une prise de poste : le <%= l(@job.date_debut, format: :long, locale: :'fr') %>
+  <%= "Date de fin : #{l(@job.date_fin, format: :long, locale: :'fr')}" if @job.contrat != "CDI" %>.
+
+Merci de prendre en considération ma demande.
+
+Cordialement.
+
+<%= @nom %>
