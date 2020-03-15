@@ -1,5 +1,5 @@
 class SitesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index]
+  # skip_before_action :authenticate_user!, only: [:index]
   before_action :set_site, only: %i[edit update destroy]
   def index
     @sites = policy_scope(Site.geocoded)

@@ -1,5 +1,5 @@
 class ServicesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index]
+  # skip_before_action :authenticate_user!, only: [:index]
   before_action :set_service, only: %i[show edit update]
   def index
     if params[:query].present?

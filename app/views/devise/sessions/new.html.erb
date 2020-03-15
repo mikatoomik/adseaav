@@ -1,5 +1,7 @@
-<h2>Log in</h2>
-
+<div class="col-12 col-md-6 mx-auto">
+  <div class="jumbotron">
+  <h2>Site en maintenance</h2>
+<p>Administrateur : Vous devez vous connecter pour acceder</p>
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
     <%= f.input :email,
@@ -13,8 +15,10 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+    <%= f.button :submit, "Se connecter" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+
+</div>
+</div>

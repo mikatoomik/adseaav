@@ -13,7 +13,7 @@ class Job < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :search_in_jobs,
-    against: [ :contrat, :etp, :intitule ],
+    against: [ :contrat, :etp, :intitule, :n_pole_emploi, :missions, :resultats ],
     associated_against: {
       service: [ :nom ],
       site: [ :nom ]

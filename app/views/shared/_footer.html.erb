@@ -1,5 +1,5 @@
 <div class="footer">
-  <div class="col-12 col-md-4">
+  <div class="col-12 col-md-3">
     <div class="footer-menu-bas">
       <ul>
         <li><%= link_to "Nos Pôles", poles_path %></li>
@@ -9,20 +9,13 @@
       </ul>
     </div>
   </div>
-  <div class="col-12 col-md-4">
-    <!-- <div class="footer-news">
-      <h5>Newsletter</h5>
-      <p>Recevez nos offres d'emploi, nos infos, nos actualités</p>
-    </div> -->
-    <div class="footer-copyright">
-      Site réalisé par
-      <%= link_to root_path, class: "copyright-link" do %>
-      <%= image_tag "logo_glumy.png" %>
-      <% end %>
-      Glumy.tech
+  <div class="col-12 col-md-6">
+    <div class="footer-news text-center">
+    <p>Recevez nos offres d'emploi, nos infos, nos actualités</p>
+      <a class="btn btn-outline-light btn-lg arondi hvr-pulse" href="https://mikaelautheman.typeform.com/to/Xe9kGR" data-mode="popup"  data-submit-close-delay="0" target="_blank">Contactez-nous </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
     </div>
   </div>
-  <div class="col-12 col-md-4">
+  <div class="col-12 col-md-3 text-center">
     <div class="footer-links d-flex justify-content-end">
       <a href="#"><i class="fab fa-github"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
@@ -30,28 +23,16 @@
       <a href="#"><i class="fab fa-twitter"></i></a>
       <a href="#"><i class="fab fa-linkedin"></i></a>
     </div>
-    <div class="footer-contact  d-flex justify-content-end">
-      <a class="typeform-share button" href="https://mikaelautheman.typeform.com/to/Xe9kGR" data-mode="popup" style="display:inline-block;text-decoration:none;background-color:#6FB8FF;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:7px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" data-submit-close-delay="0" target="_blank">Contactez-nous </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+  </div>
+  <div class="col-12 col-md-6 mx-auto">
+  <div class="footer-copyright text-center">
+      Site réalisé par
+      <%= link_to root_path, class: "copyright-link" do %>
+      <%= image_tag "logo_glumy.png" %>
+      <% end %>
+      Glumy.tech
     </div>
   </div>
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="formulaireModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Formulaire de contact</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        a venir
-      </div>
-      <div class="modal-footer">
-      </div>
-    </div>
-  </div>
-</div>
+

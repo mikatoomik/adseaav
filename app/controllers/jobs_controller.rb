@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  # skip_before_action :authenticate_user!, only: [:index, :show, :postule]
   before_action :set_job, only: %i[show edit update postule mail_postule destroy]
   def index
     if params[:query].present?
