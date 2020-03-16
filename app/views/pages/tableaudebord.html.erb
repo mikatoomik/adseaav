@@ -1,0 +1,52 @@
+<h1>Tableau de Bord </h1>
+
+<h2>Modification des données<h2>
+
+<div class="form-group">
+  <%= form_tag tableaudebord_path, method: :get do %>
+    <%= radio_button_tag(:don, 'poles') %>
+    <%= label_tag(:don_pole, "poles") %>
+    <%= radio_button_tag(:don, 'services') %>
+    <%= label_tag(:don_service, "services") %>
+    <%= radio_button_tag(:don, 'sites') %>
+    <%= label_tag(:don_site, "sites") %>
+    <%= radio_button_tag(:don, 'users') %>
+    <%= label_tag(:don_user, "users") %>
+    <%= submit_tag "Choisir", :name => nil, class:"btn btn-primary m-2" %>
+  <% end %>
+  </form>
+</div>
+
+<% if params[:don] == "poles" %>
+<% type = @poles %>
+<% elsif params[:don] == "services" %>
+<% type = @services %>
+<% elsif params[:don] == "sites" %>
+<% type = @sites %>
+<% else %>
+<% type = @users %>
+<% end %>
+<p>
+  <% url1 = "/#{params[:don]}/new" %>
+  <%= link_to url1 do %>
+    <i class="fas fa-plus-circle"></i>Créer une nouvelle entrée
+  <% end %>
+  <ul>
+  <% type.each do |donnee| %>
+    <li>
+    <% unless type == @services %>
+      <% url2 = "/#{params[:don]}/#{donnee.id}/edit" %>
+      <%= link_to url2 do %>
+        <i class="fas fa-pencil-alt"></i>
+      <% end %>
+    <% end %>
+    <%= donnee.nom unless type == @users %>
+    <%= donnee.email if type == @users %>
+    <% url3 = "/#{params[:don]}/#{donnee.id}" %>
+    <%= link_to url3, data: { confirm: "Are you sure?" }, method:'DELETE' do %>
+      <i class="fas fa-trash-alt"></i>
+    <% end %>
+    </li>
+  <% end %>
+  </ul>
+</p>

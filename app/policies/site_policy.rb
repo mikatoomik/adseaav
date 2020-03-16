@@ -24,4 +24,12 @@ class SitePolicy < ApplicationPolicy
     end
   end
 
+  def destroy?
+    if user
+      user.admin
+    else
+      false
+    end
+  end
+
 end

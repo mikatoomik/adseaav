@@ -1,0 +1,9 @@
+<div class="col-12 col-md-6 mx-auto">
+  <div class="jumbotron">
+    <h3>Créer un pole</h3>
+    <%= simple_form_for(@pole) do |f| %>
+      <%= f.input :nom %>
+      <%= f.button :submit,  "Créer le nouveau pole", class:"btn btn-success" %>
+    <% end %>
+  </div>
+</div>

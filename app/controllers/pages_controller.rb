@@ -6,4 +6,12 @@ class PagesController < ApplicationController
     @sites = Site.all
   end
 
+  def tableaudebord
+    @users = User.all
+    @poles = Pole.all
+    @sites = Site.all
+    @services = Service.all
+  end
+
+
 end

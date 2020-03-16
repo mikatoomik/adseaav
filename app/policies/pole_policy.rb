@@ -15,4 +15,21 @@ class PolePolicy < ApplicationPolicy
       false
     end
   end
+
+  def create?
+    if user
+      user.admin
+    else
+      false
+    end
+  end
+
+  def destroy?
+    if user
+      user.admin
+    else
+      false
+    end
+  end
+
 end
