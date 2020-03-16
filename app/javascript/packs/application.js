@@ -21,10 +21,10 @@ import {
 
 initCardFlip();
 
-import {
-  initTypetext
-} from '../plugins/init_typetext';
+// import {
+//   initTypetext
+// } from '../plugins/init_typetext';
 
-initTypetext();
+// initTypetext();
 
 

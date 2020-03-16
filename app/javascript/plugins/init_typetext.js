@@ -10,5 +10,7 @@ const initTypetext = () => {
     });
   }
 }
+
+
 export { initTypetext };
 

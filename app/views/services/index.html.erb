@@ -46,6 +46,9 @@
         <% end %>
         <%= raw(service.resume) %>
       </p>
+      <%= link_to pole_path(service.pole) do %>
+        <button type="button" class="btn btn-outline-info btn-block">En savoir plus</button>
+      <% end %>
     </div>
     <div class="card-footer text-muted small">
     <% if policy(service).edit? %>

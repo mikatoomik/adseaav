@@ -33,9 +33,9 @@ class ServicesController < ApplicationController
 
   def update
     if @service.update(service_params)
-       redirect_to pole_path(@service.pole)
+       redirect_to services_path
     else
-       render pole_path(@service.pole)
+       render services_path
     end
   end
 
