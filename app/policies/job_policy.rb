@@ -18,14 +18,14 @@ class JobPolicy < ApplicationPolicy
 
   def update?
     if user
-      user.admin || user.rh
+      user.admin
     else
       false
     end
   end
   def create?
     if user
-      user.admin || user.rh
+      user.admin
     else
       false
     end
@@ -33,7 +33,7 @@ class JobPolicy < ApplicationPolicy
 
   def destroy?
     if user
-      user.admin || user.rh
+      user.admin
     else
       false
     end
